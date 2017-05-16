@@ -1,0 +1,831 @@
+body{
+	font-size: 0.32rem;
+    font-family: "苹方","微软雅黑", "Helvetica";
+    color: #999;
+    background: #F5F6FA;
+}
+.header-title{
+	width: 100%;
+	height: 0.89rem;
+	background: #007be3;
+	position: fixed;
+	left: 0;
+	top: 0;
+	margin: auto;
+	z-index: 100;
+}
+.header-title ul{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.header-title ul li{
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+.header-title ul li a{
+	display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 0.32rem;
+    line-height: 1rem;
+    border: none;
+    text-align: center;
+}
+.banner{
+	width: 100%;
+	height: 5rem;
+	background-image: url('../img/UI/uibanner.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+} 
+.banners{
+	width: 100%;
+	height: 4.14rem;
+	background-image: url('../img/UI/uibanners.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+}
+/* 内容开始 */
+.partone{
+	width: 100%;
+	height: 6.9rem;
+	padding: 0 0.24rem;
+	/* background: red; */
+	margin-top: 0.4rem;
+}
+.partone-top{
+	width: 100%;
+    height: 0.4rem;
+    text-align: center;
+    line-height: 0.4rem;
+    font-size: 0.36rem;
+    color: #333;
+    font-weight: bold;
+}
+.partone-top,.partone-top p{
+	display: inline-block;
+
+}
+.partone-top p{
+	font-weight: 400;
+}
+.fenge{
+	width: 2.7rem;
+    height: 0.1rem;
+    margin: 0 auto;
+    position: relative;
+    background: url('../img/UI/ui1lines.png') center center no-repeat;
+    background-size: 100%;
+}
+.partone-top2{
+	/* width:  */
+	display: block;
+	color: #333;
+	font-size: 0.3rem;
+    line-height: 0.3rem;
+    height: 0.3rem;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 400;
+}
+.partone-bottom{
+	width: 6.8rem;
+	height: 5.4rem;
+	margin: 0.6rem 0.11rem 0.2rem 0.11rem;
+}
+.partone-bottom ul{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.partone-bottom ul li{
+	width: 2.1rem;
+	height: 2.5rem;
+	/* background: yellow; */
+}
+.partone-bottom ul li div{
+	width: 2.1rem;
+    height: 1.1rem;
+    color: #fff;
+    font-size: 0.28rem;
+    line-height: 1.1rem;
+    font-weight: 600;
+    padding-left: 0.8rem;
+}
+.bottom-part1{
+	background-image: url('../img/UI/fwtx1.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.partone-bottom ul li p{
+	display: block;
+	width: 2.1rem;
+    height: 1.4rem;
+    color: #333;
+    font-size: 0.26rem;
+    line-height: 0.32rem;
+    text-align: center;
+    padding-top: 0.2rem;
+    border: 1px dashed #f2a111;
+}
+.partone-bottom ul li:nth-child(2) p{
+	border: 1px dashed #2f90da;
+}
+.partone-bottom ul li:nth-child(3) p{
+	border: 1px dashed #f87844;
+}
+.partone-bottom ul li:nth-child(4) p{
+    border: 1px dashed #1bbf99;
+}
+.partone-bottom ul li:nth-child(5) p{
+    border: 1px dashed #f8ce68;
+}
+.partone-bottom ul li:nth-child(6) p{
+    border: 1px dashed #c16bbb;
+}
+
+.bottom-part2{
+	background-image: url('../img/UI/fwtx2.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.bottom-part3{
+	background-image: url('../img/UI/fwtx3.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.bottom-part4{
+	background-image: url('../img/UI/fwtx4.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.bottom-part5{
+	background-image: url('../img/UI/fwtx5.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.bottom-part6{
+	background-image: url('../img/UI/fwtx6.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}   
+/* 第二部分 */
+.parttwo-titlek{
+	width: 100%;
+	height: 1.3rem;
+	background-image: url('../img/UI/uititle1.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	float: left;
+}
+.title-zik{
+	margin: 0 auto;
+	margin-top: 0.35rem;
+}
+.part-title{
+	width: 100%;
+    height: 0.4rem;
+    text-align: center;
+    line-height: 0.4rem;
+    font-size: 0.36rem;
+    color: #333;
+    font-weight: bold;
+    color: #fff;
+}
+.part-title,.part-title p{
+	display: inline-block;
+}
+.part-title p{
+	font-weight: 400;
+}
+.title-fenge{
+	width: 2.7rem;
+    height: 0.1rem;
+    margin: 0 auto;
+    position: relative;
+    background: url('../img/UI/ui2lines.png') center center no-repeat;
+    background-size: 100%;
+}
+.part-title1{
+	display: block;
+	color: #333;
+	font-size: 0.3rem;
+    line-height: 0.3rem;
+    height: 0.3rem;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 400;
+    color: #fff;
+}
+.parttwo-tuwen{
+	width: 7.02rem;
+    height: 3.15rem;
+    border: 0.02rem dashed #030000;
+    background: #f5f5f5;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 0.5rem;
+    position: relative;
+    top: 0.5rem; 
+    /* float: left; */
+}
+.parttwo-tuwen p{
+	text-align: center;
+    line-height: 0.36rem;
+    color: #333;
+    font-size: 0.26rem;
+    margin-top: 0.06rem;
+}
+.parttwo-tuwen-zi{
+	width: 100%;
+    height: auto;
+    margin-top: 0.1rem;
+}  
+.parttwo-tuwen p span{
+	color: #00a8ff;
+    font-weight: 600;
+}
+.parttwo-tuwen-tu{
+	width:7.02rem;
+	height: 3.74rem;
+    background-image: url('../img/UI/ui11s.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: 0.5rem;
+    z-index: -10;
+    margin-right: 0.32rem;
+}
+/* 第三部分 */
+.partthree-bigk{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin-top: -0.59999rem;
+}
+.partthree-titlek{
+	width: 100%;
+	height: 1.3rem;
+	background-image: url('../img/UI/uititle2.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	float: left;
+	position: relative;
+	/* z-index: 10; */
+}
+.partthree-tuwenk{
+	width: 100%;
+    height: 12.4rem;
+    background: #1b1d32;
+	float: left;
+	margin-top: -0.4rem;
+    padding-top: 0.4rem;
+}
+.three-tuwenk-title{
+	width: 2.46rem;
+    height: 0.8rem;
+    margin: 0 auto;
+    padding: 0.2rem;
+    text-align: center;
+    line-height: 0.4rem;
+    font-size: 0.3rem;
+    border-bottom: 1px dashed #fff;
+    position: relative;
+    color: #f5f5f5;
+}
+.three-tuwen-tiao{
+	width: 100%;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0.1rem;
+}
+.tiaoxing{
+	width: 7.02rem;
+    height: 4.17rem;
+    margin: 0 auto;
+    background-image: url('../img/UI/bfb.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    margin-top: 0.25rem;
+    position: relative;
+}   
+.tiaoxing div{
+	height: 0.32rem;
+    position: absolute;
+    left: 1.1rem; 
+} 
+.tiaoxing .tiao1{
+	top: 0.48rem;
+	width: 0.82rem;
+    background: #fff100;
+}
+.tiaoxing .tiao2{
+	top: 1.1rem;
+	width: 1.3rem;
+    background: #1dffbd;
+}.tiaoxing .tiao3{
+	width: 4.8rem;
+    top: 1.71rem;
+    background: #0c51ff;
+}.tiaoxing .tiao4{
+	width: 2.76rem;
+    top: 2.30rem;
+    background: #00a8ff;
+}.tiaoxing .tiao5{
+	width: 0.92rem;
+    top: 2.96rem;
+    background: #1befe8;
+}
+.three-tuwen-zik{
+	width: 7.02rem;
+    height: 4.8rem;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 0.3rem;
+    position: relative;
+}
+.three-tuwen-zik ul{
+	width: 3.41rem;
+    height: 4.8rem;
+    overflow: hidden;
+    margin: 0 auto;
+    position: absolute;
+}
+.three-tuwen-zik .ul1{
+	left: 0;
+}
+.three-tuwen-zik .ul2{
+	right: 0;
+}
+.three-tuwen-zik ul li{
+	padding-top: 0.14rem;
+    width: 3.41rem;
+    height: 2.21rem;
+    overflow: hidden;
+	background-image: url('../img/UI/ui2back.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    margin-top: 0.19rem; 
+}
+.three-tuwen-zik ul p{
+	font-size: 0.24rem;
+    line-height: 0.4rem;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    height: 1.67rem;
+    overflow: hidden;
+}
+.three-tuwen-zik ul span{
+	display: block;
+    width: 100%;
+    font-size: 0.3rem;
+    line-height: 0.4rem;
+    text-align: center;
+    color: #fff;
+}
+.three-more{
+	display: block;
+    width: 2.99rem;
+    height: 0.8rem;
+    margin: 0.4rem auto;
+	background-image: url('../img/UI/btn.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 0.8rem;
+    font-size: 0.28rem;
+    position: relative;
+}
+/* 第四部分 */
+.partfour-bigk{
+	margin-top: -0.2rem;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.partfour-titlek{
+	width: 100%;
+	height: 1.3rem;
+	background-image: url('../img/UI/uititle1.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	float: left;
+	position: relative;
+	/* z-index: 10; */
+}
+.four-list{
+	width: 7.02rem;
+    height: 4.1rem;
+    overflow: hidden;
+    margin: 0 auto;
+    /* background: red; */
+   	position: relative;
+	top: 0.4rem;
+	margin-bottom: 0.78rem;
+}
+.list-title{
+	width: 100%;
+    height: 0.6rem;
+}
+.list-title p{
+	display: block;
+	color: #fff;
+    font-size: 0.26rem;
+    line-height: 0.6rem;
+    height: 0.6rem;
+    border-radius: 0.1rem 0.1rem 0 0;
+    background: #40abfd;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    width: 1.3rem;
+}
+.list-title .p2{
+	width: 1.8rem;
+    background: #219eff;
+}
+.list-title .p3{
+	width: 3.92rem;
+    background: #118ded;
+}
+.list-content{
+	width: 7rem;
+	height: 3.5rem;
+	border: 1px solid #1875ff;
+} 
+.list-content ul{
+	width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.list-content ul li{
+	width: 100%;
+    height: 0.7rem;
+    /* overflow: hidden; */
+    
+}
+.list-content ul li p{
+    height: 100%;
+    overflow: hidden;
+    float: left;
+    font-size: 0.26rem;
+    line-height: 0.7rem;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* text-align: center; */
+}
+.stu-name{
+    width: 1.3rem; 
+     color: #666;
+}
+.stu-money{
+    color: #feaf34;
+    width: 1.8rem;
+}
+.stu-daiyu{
+    width: 3.86rem;
+    color: #666;
+}
+/* 第五部分 */
+.partfive-bigk{
+    /* margin-top: -0.2rem; */
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: #EEEFF3;
+}
+.partfive-titlek{
+    width: 100%;
+    height: 1.3rem;
+    background-image: url('../img/UI/uititle3.png');
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    float: left;
+    position: relative;
+    /* z-index: 10; */
+}
+.five-tuwenk{
+    width: 7.02rem;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+}
+.five-tuwenk ul li{
+    width: 100%;
+    margin-top: 0.3rem;
+    height: auto;
+    overflow: hidden;
+    background: #fff;
+}
+.five-tuwenk span{
+    display: block;
+    width: 100%;
+    height: auto;
+    color: #333;
+    overflow: hidden;
+    font-size: 0.3rem;
+    padding: 0.1rem 0.2rem;
+    margin-top: 0.2rem;
+    line-height: 0.32rem;
+}
+.five-tuwenk p{
+    width: 100%;
+    height: auto;
+    padding: 0.2rem;
+    overflow: hidden;
+    margin-top: 0.1rem;
+    border-top: 1px dashed #a0a0a0;
+    font-size: 0.26rem;
+    line-height: 0.36rem;
+    text-align: justify;
+    color: #666;
+    letter-spacing: 1px;
+}
+.five-zi1{
+    border-top: 2px solid #f88c00;
+}
+.five-zi2{
+    border-top: 2px solid #32afff;
+}
+.five-zi3{
+    border-top: 2px solid #eb6877;
+}
+.five-zi4{
+    border-top: 2px solid #22ac38;
+}
+.five-zi5{
+    border-top: 2px solid #ea61d5;
+}
+.five-zi6{
+    border-top: 2px solid #13e5e3;
+}
+
+/* 第六部分 */
+.partsix-bigk{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    /* background: red; */
+    margin-top: 0.5rem;
+}
+.six-tuwenk{
+    width: 7.02rem;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 1.8rem;
+    /* background: pink; */
+}
+.six-tuwenk ul{
+    width: 100%;
+    height: 2.63rem;
+    overflow: hidden;
+    margin-top: 0.1rem;
+}
+.six-tuwenk ul li{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+.six-tuwenk ul li{
+    width: 3.46rem;
+    height: 2.63rem;
+    overflow: hidden;
+    float: left;
+}
+.six-tu1-left{
+    margin-right: 0.1rem;
+    background-image:url('../img/UI/ui51.png');
+}
+.six-tu1-right{
+    background-image: url('../img/UI/ui52.png');
+}
+.six-tu2{
+    background-image: url('../img/UI/ui53.png');
+}
+.six-tu3-left{
+    margin-right: 0.1rem;
+    background-image:url('../img/UI/ui54.png');
+}
+.six-tu3-right{
+    background-image: url('../img/UI/ui55.png');
+}
+/* 第七部分 */
+.partseven-bigk{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+.seven-tuwenk{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 0 0.7rem;
+    margin-top: 1.6rem;
+    /* background: red; */
+}
+.seven-tuwenk .face{
+    width: 100%;
+    height: 0.85rem;
+    font-size: 0.28rem;
+    color: #333;
+    text-align: center;
+    line-height: 0.85rem;
+    font-weight: 600;
+}
+.biaodank{
+    width: 100%;
+    height: 5.2rem;
+}
+.biaodank li{
+    width: 100%;
+    height: 1rem;
+}
+.biao-name{
+    width: 1.2rem;
+    height: 0.6rem;
+    display: block;
+    color: #333;
+    font-size: 0.3rem;
+    line-height: 0.6rem;
+    float: left;
+    margin-top: 0.4rem;
+    padding: 0.08rem 0 0.08rem 0.16rem;
+}
+.biao-name-r{
+    border: 0;
+    float: left;
+    color: #333;
+    font-size: 0.3rem;
+    width: 4.2rem;
+    line-height: 0.6rem;
+    text-indent: 1em;
+    overflow: hidden;
+    /* padding: 0; */
+    padding-left: 0.1rem;
+}
+.biao-name-r input{
+    float: left;
+    color: #333;
+    font-size: 0.3rem;
+    background-repeat: no-repeat;
+    background-image: url('../img/UI/input.png');
+    background-position: center center;
+    background-size: 100%;
+    border: none;
+    outline: none;
+    width: 4.0rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    text-indent: 1em;
+    margin-top: 0.4rem;
+}
+select{
+    float: left;
+    color: #333;
+    font-size: 0.3rem;
+    background-repeat: no-repeat;
+    background-image: url('../img/UI/input.png');
+    background-position: center center;
+    background-size: 100%;
+    border: none;
+    outline: none;
+    width: 4.0rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    text-indent: 1em;
+    margin-top: 0.4rem;
+}  
+.banquan{
+    width: 100%;
+    height: 1.2rem;
+    /* margin-top: 1.4rem; */
+    margin-bottom: 0.9rem;
+}  
+.banquan p{
+    color: #666;
+    font-size: 0.2rem;
+    text-align: center;
+    padding-top: 0.18rem;
+}
+/* 底部开始 */
+.contact{
+    width: 100%;
+    height: 0.9rem;
+    background-color: #ffffff;
+    margin-top: 0.2rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+.contact-dibu{
+    width: 100%;
+    height: 100%;
+    background: #e7e7e7;
+}
+.dibu-left{
+    width: 30%;
+    height: 0.8rem;
+    float: left;
+    font-size: 0.24rem;
+    color: #000;
+    text-align: left;
+    line-height: 0.9rem;
+    background: #e7e7e7;
+}
+.dibu-left span{
+    float: left;
+    font-size: 0.26rem;
+    /* margin-left: 0.1rem; */
+}
+.dibu-left span .p5{
+    width: 0.32rem;
+    height: 0.32rem;
+    float: left;
+    line-height: 0.9rem;
+    margin-top: 0.28rem;
+    margin-left: 0.27rem;
+    background-image: url('../img/qq.png');
+    background-size: 100%;
+    background-position: center center;
+    margin-right: 0.1rem;
+}
+.dibu-middle{
+    width: 40%;
+    height: 0.9rem;
+    position: relative;
+    z-index: 99999;
+    background-color: #ff8d12;
+    border-radius: 0.08rem;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0px 0px 0.15rem #ff8d12;;
+    float: left;
+    bottom: 0.1rem;
+}
+.dibu-middle span{
+    text-align: center;
+    float: left;
+    margin-left: 0.6rem; 
+    margin-top: 0.28rem;
+    font-size: 0.3rem;
+    font-weight: bold;
+}
+.dibu-middle span p{
+    width: 0.32rem;
+    height: 0.32rem;
+    float: left;
+    line-height: 0.9rem;
+    margin-right: 0.2rem;
+    background-image: url('../img/shouye6.png');
+    background-position: -1.6rem -4.78rem;
+    background-size: 2rem;
+    background-repeat: no-repeat;
+}
+.dibu-left span .p6{
+    width: 0.32rem;
+    height: 0.32rem;
+    float: left;
+    line-height: 0.9rem;
+    margin-top: 0.28rem;
+    margin-left: 0.27rem;
+    margin-right: 0.1rem;
+    background-image: url('../img/shouye6.png');
+    background-position: -1.6rem -5.3rem;
+    background-size: 2rem;
+    background-repeat: no-repeat;
+    
+}

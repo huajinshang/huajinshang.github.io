@@ -1,0 +1,69 @@
+.beijingtu1{
+    width:100%;
+    height:100%;
+    background-image: url('../img/banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+.beijingtu1:after{
+    content: "";
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    background: rgba(0, 0, 0, 0.45);
+}
+/* 技能开始  */
+.beijingtu2{
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/skill.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+}
+.zhezhao2{
+    height:100%;
+    padding-top: 100px;
+    background-image: url('../img/15.png');
+}
+
+.beijingtu4{
+    background-image: url('../img/hire.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#menu{
+    width:100%;
+    height:50px;
+    position: fixed;
+    top:0;
+    border-bottom:1px solid #000;
+    background: #fff;
+    z-index: 999;
+}
+#menu>ul{
+    width:100%;
+    height:50px;
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+#menu>ul>li{
+    width:20%;
+    height:100%;
+    float: left;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;
+}
+#menu>ul>li>a{
+    display: block;
+    width:100%;
+    height:100%;
+}

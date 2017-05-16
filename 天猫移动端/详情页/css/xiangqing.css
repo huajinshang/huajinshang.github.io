@@ -1,0 +1,177 @@
+* img{
+	width: 100%;
+	height: 100%;
+}
+.head-title{
+	width: 100%;
+	height: 0.82rem;
+	display: flex;
+    text-align: center;
+    font-size: 0.25rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    background: #fff;
+}
+.head-title a{
+	width: 33.333333%;
+	height: 100%;
+    color: #051b28;
+    border-top: 2px solid transparent;
+    position: relative;
+    line-height: 0.82rem;
+}
+.head-title a:after{
+	content:"";
+	position: absolute;
+    right: 0;
+    top: .4em;
+    bottom: .4em;
+    border-right: 1px solid #e5e5e5;
+}
+.head-title .head-middle{
+	border-top-color: #c40000;
+    color: #c40000;
+}
+.banner{
+	width: 100%;
+	height: 0.88rem;
+	background-image: url('../img/banner.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
+	/* margin-top: 0.82rem; */
+	position: fixed;
+	top: 0.82rem;
+	left: 0;
+	z-index: 20;
+}
+.tuwen-title{
+	width: 100%;
+	height: 0.96rem;
+    line-height: 0.96rem;
+    color: #051B28;
+    text-align: center;
+    overflow: hidden;
+    font-size: 0.32rem;
+    background: #F4F4F4;
+    margin-top: 1.7rem;
+}
+.fenge1{
+	width: 100%;
+	height: 0.2rem;
+	background: #EEEEEE;
+	border-top: 0.02rem solid rgba(0,0,0,.1);
+}
+.dianpuk{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.dian-title{
+	background: #FFF;
+    height: 34px;
+    line-height: 34px;
+    position: relative;
+    padding: 6px 0 0 12px;
+    font-size: 14px;
+    color: #666;
+}
+.tukuang{
+	padding-top: 47.5%;
+    display: block;
+    background-image: url('../img/dianpu1.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
+	margin-bottom: 0.2rem;
+}
+.fenge2{
+	background: #eee;
+    height: 0.2rem;
+    display: block;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+.shangzhou{
+	width: 100%;
+	height: 0.36rem;
+	background: #F4F4F4;
+	padding: 0 0.2rem;
+	color: #051b28;
+	font-size: 0.2rem;
+}
+.fenge3{
+	background: #EEEEEE;
+    height: 0.2rem;
+    display: block;
+    /* width: 7.1rem; */
+    border-top: 0.02rem solid rgba(0,0,0,.1);
+    border-left:0.2rem solid #F4F4F4;
+    border-right:0.2rem solid #F4F4F4;
+    /* margin: 0 auto; */
+}
+.shangtuk{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.shangtuk li{
+	float: left;
+	width: 100%;
+	height: 3.2rem;
+	background: red;
+}
+.dianpuk div{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+/* 同店推荐 */
+.tuijian-bigk{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.tuituk{
+	width: 2.46rem;
+	height: 3.94rem;
+	float: left;
+	margin-right: 0.06rem;
+	background: #fff;
+}
+.tuituk:nth-last-child(1){
+	margin-right: 0rem;
+}
+.tuijian-tu{
+	display: block;
+	width: 100%;
+	height: 2.46rem;
+	/* background: yellow; */
+}
+.tuijian-zi{
+	font-size: 0.28rem;
+    padding: 0.12rem 0.12rem 0;
+    height: 0.84rem;
+    line-height: 0.36rem;
+    overflow: hidden;
+} 
+.tuprice{
+	padding: 0 0 0.04rem 0.08rem;
+    color: #dd2727;
+    line-height: 0.6rem;
+    font-size: 0.32rem;
+}
+.ditu{
+	display: block;
+	width: 100%;
+	height: 3.68rem;
+	margin-bottom: 1rem;
+}
+.gouwuche{
+	width: 100%;
+	height: 1rem;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}

@@ -1,0 +1,61 @@
+.contant-bigk{
+	width: 684px;
+	height:auto;
+	overflow: hidden;
+	float: left;
+}
+.contant-right{
+	width: 684px;
+	min-height: 700px;
+    border-top: 7px solid #406790;
+    margin-bottom:30px;
+    /* background: grey; */
+    float: left;
+    padding: 70px 30px 60px 50px;
+    background: #fff;
+}
+.contant-right-zik{
+	width: auto;
+	height: 96px;
+	/* background: red; */
+	border-left: 6px solid #406790;
+	padding-left: 10px;
+	font-size: 20px;
+	color: #000;
+}
+.contant-right-zik h1{
+	margin-top: 3px;
+}
+.contant-right-zik h4{
+	margin-top: 10px;
+}
+.contant-inputk{
+	width: 375px;
+	height: auto;
+	margin-top: 40px;
+}
+.contant-name{
+	width: 375px;
+	height: 43px;
+	border: 1px solid #CCCCCC;
+	padding: 6px 12px;
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+.liuyan{
+	resize: none;
+	width: 375px;
+	border: 1px solid #CCCCCC;
+	padding: 6px 12px;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+.contact-fasong{
+	width: 100px;
+	height: 48px;
+	font-size: 16px;
+	color: #fff;
+	background: #406790;
+}
+
+
