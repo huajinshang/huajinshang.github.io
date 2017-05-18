@@ -1,0 +1,12 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	/* 去除A标签下划线 */
+}
+a{
+	color: #808080;
+}
+ul,li,ol{
+	list-style: none;
+}
