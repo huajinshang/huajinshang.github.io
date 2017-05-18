@@ -7,10 +7,19 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/person.css">
     <link rel="stylesheet" href="css/new.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!--进度条css-->
+    <link rel="stylesheet" href="css/tiao.css">
 
     <script src="js/jQuery.js"></script>
     <link rel="stylesheet" href="css/jquery.fullPage.css">
     <script src="js/jquery.fullPage.js"></script>
+
+    <!--作品轮播css/js-->
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <script src="js/swiper-3.4.2.min.js"></script>
+
     <script>
         $(function () {
             $('#fullpage').fullpage({
@@ -19,11 +28,38 @@
                 anchors: ['p1', 'p2', 'p3', 'p4', 'p5'],
                 'navigation': true,
                 'navigationPosition': 'right',
-                'navigationTooltips': ['fullPage.js', 'Powerful', 'Amazing', 'Simple'],
-                fixedElements:"#menu",
-                menu:"#menu"
-            })
-        })
+                'navigationTooltips': ['home', 'introduction', 'skills', 'portfolto', 'contact'],
+                fixedElements: "#menu",
+                menu: "#menu",
+                afterLoad: function (aLink, index) {
+                    if (index == 1) {
+                        $("#menu").hide(500);
+                    } else {
+                        $("#menu").show(500);
+                    }
+                }
+            });
+
+            //topbar内容
+            $("#menu li").prepend("<span></span>"); //Throws an empty span tag right before the a tag
+            $("#menu li").each(function () { //For each list item...
+                var linkText = $(this).find("a").html(); //Find the text inside of the a tag
+                $(this).find("span").show().html(linkText); //Add the text in the span tag
+            });
+            $("#menu li").hover(function () {	//On hover...
+                $(this).find("span").stop().animate({
+                    marginTop: "-40" //Find the span tag and move it up 40 pixels
+                }, 250);
+            }, function () { //On hover out...
+                $(this).find("span").stop().animate({
+                    marginTop: "0" //Move the span back to its original state (0px)
+                }, 250);
+            });
+
+
+
+
+            });
     </script>
 </head>
 <body>
@@ -35,8 +71,10 @@
         <li><a href="#p4">PORTFOLIO</a></li>
         <li><a href="#p5">CONTACT</a></li>
     </ul>
+    <div class="cls"></div>
 </div>
 <div id="fullpage">
+    <!--首页-->
     <div class="section">
         <div class="beijingtu1">
             <div class="container">
@@ -45,21 +83,21 @@
                         <div class="welcome">
                             <h3 class="welcome-zi">WELCOME</h3>
                         </div>
-                        <div class="bleft-xia">
+                        <div class="bleft-xia " id="headernav">
                             <div class="juxing1">
-                                <h3>Home</h3>
+                                <a href="#p1"><h3>Home</h3></a>
                             </div>
                             <div class="juxing2">
-                                <h3>About</h3>
+                                <a href="#p2"><h3>About</h3></a>
                             </div>
                             <div class="juxing3">
-                                <h3>Skill</h3>
+                                <a href="#p3"><h3>Skill</h3></a>
                             </div>
                             <div class="juxing4">
-                                <h3>Production</h3>
+                                <a href="#p4"><h3>Production</h3></a>
                             </div>
                             <div class="juxing5">
-                                <h3>Contact</h3>
+                                <a href="#p5"><h3>Contact</h3></a>
                             </div>
                         </div>
                     </div>
@@ -70,198 +108,241 @@
             </div>
         </div>
     </div>
-
-    <div class="section">
-        <div class="row hang2">
-            <div class="about-left col-lg-4 col-sm-4 col-xs-12">
-                <div class="about-zik">
-                    <h2>WHAT TO KNOW ABOUT ME ?</h2>
+    <!--自我介绍-->
+    <div class="section beijingtu5">
+        <div class="container">
+            <div class="row hang2">
+                <div class="about-left col-lg-4 col-sm-4 col-xs-12">
+                    <div class="about-zik">
+                        <h2>WHAT TO KNOW ABOUT ME ?</h2>
+                    </div>
+                    <div class="about-fg"></div>
+                    <div class="about-tu">
+                        <div class="atu1">
+                            <img src="img/facebook.png" alt="">
+                        </div>
+                        <div class="atu1">
+                            <img src="img/google-plus.png" alt="">
+                        </div>
+                        <div class="atu1">
+                            <img src="img/twitter.png" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div class="about-fg"></div>
-                <div class="about-tu">
-                    <div class="atu1">
-                        <img src="img/facebook.png" alt="">
-                    </div>
-                    <div class="atu1">
-                        <img src="img/google-plus.png" alt="">
-                    </div>
-                    <div class="atu1">
-                        <img src="img/twitter.png" alt="">
+                <div class="about-right col-lg-8 col-sm-8 col-xs-12">
+                    <h3>INTRODUCTION</h3>
+                    <div>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMy name is Yang Jinrui, a simple and honest, have a positive
+                        attitude, hard work. The character is calm and restrained, work carefully and steadfast, personality
+                        tough,
+                        can bear hardships and stand hard work, have a strong sense of responsibility! Have a strong
+                        entrepreneurial
+                        spirit and team spirit, learning ability, adaptability, ability to work under pressure, self
+                        challenge.
                     </div>
                 </div>
             </div>
-            <div class="about-right col-lg-8 col-sm-8 col-xs-12">
-                <h3>INTRODUCTION</h3>
-                <div>
-                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMy name is Yang Jinrui, a simple and honest, have a positive
-                    attitude, hard work. The character is calm and restrained, work carefully and steadfast, personality
-                    tough,
-                    can bear hardships and stand hard work, have a strong sense of responsibility! Have a strong
-                    entrepreneurial
-                    spirit and team spirit, learning ability, adaptability, ability to work under pressure, self
-                    challenge.
+            <div class="row hang6">
+                <div class=" icon-infomation col-xs-6 col-sm-3 col-lg-3">
+                    <img src="img/glass.png" alt="">
+                    <h4>基本信息</h4>
+                    <p>
+                        <br>
+                        年龄: 21岁 籍贯：山西
+                    </p>
+                </div>
+                <div class=" icon-infomation col-xs-6 col-sm-3 col-lg-3">
+                    <img src="img/hat.png" alt="">
+                    <h4>毕业院校</h4>
+                    <p>
+                        <br>
+                        山西省财政税务专科学校
+                    </p>
+
+                </div>
+                <div class=" icon-infomation col-xs-6 col-sm-3 col-lg-3">
+                    <img src="img/book.png" alt="">
+                    <h4>学历和专业</h4>
+                    <p>
+                        大专
+                        <br>
+                        专业技能 编程
+                    </p>
+                </div>
+                <div class=" icon-infomation col-xs-6 col-sm-3 col-lg-3">
+                    <img src="img/tel.png" alt="">
+                    <h4>联系方式</h4>
+                    <p>
+                        邮箱 chenjichuan521@sina.cn
+                        <br>
+                        电话18610982803
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="section index3">
+    </div>
+    <!--技能-->
+    <div class="section ">
         <div class="beijingtu2">
             <div class="zhezhao2">
-                <div class="row hang3">
-                    <div class="skill-left col-lg-8 col-sm-8 col-xs-12">
-                        <h2>SKILLS</h2>
-                        <div>
-                            <p> PS&nbsp&nbsp
-                                <meter value="95" min="0" max="100"></meter>
-                                95%
-                            </p>
-                            <br>
-                            <p> AI&nbsp&nbsp
-                                <meter value="90" min="0" max="100"></meter>
-                                90%
-                            </p>
-                            <br>
-                            <p> UI&nbsp&nbsp
-                                <meter value="85" min="0" max="100"></meter>
-                                85%
-                            </p>
-                            <br>
-                            <p> H5&nbsp&nbsp
-                                <meter value="90" min="0" max="100"></meter>
-                                90%
-                            </p>
-                            <br>
-                            <p> JS&nbsp&nbsp
-                                <meter value="88" min="0" max="100"></meter>
-                                88%
-                            </p>
-                            <br>
+                <div class="container skill-main">
+                    <h3 class="skillh3">SKILLS</h3>
+                    <div class="row hang3">
+                        <div class="skill-left col-lg-8 col-sm-8 col-xs-12">
+                            <div class="skill-content">
+                                <div class="col">
+                                    <ul id="skill">
+                                        <li><span class="expand photoshop"></span><em>Photoshop &nbsp&nbsp90%</em></li>
+                                        <li><span class="expand html5"></span><em>HTML 5 &nbsp&nbsp70%</em></li>
+                                        <li><span class="expand css3"></span><em>CSS 3 &nbsp&nbsp90%</em></li>
+                                        <li><span class="expand javascript"></span><em>Javascript &nbsp&nbsp89%</em>
+                                        </li>
+                                        <li><span class="expand jquery"></span><em>jQuery &nbsp&nbsp85%</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-right col-lg-4 col-sm-4 col-xs-12">
+                            <h2>This is my professional skills chart</h2>
+                            <div>
+                                PS and AI software to use relatively skilled, H5 production is also good, but also do a
+                                lot
+                                of Web
+                                site projects. For JS, is still learning
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-right col-lg-4 col-sm-4 col-xs-12">
-                        <h2>This is my professional skills chart</h2>
-                        <div>
-                            PS and AI software to use relatively skilled, H5 production is also good, but also do a lot
-                            of Web
-                            site projects. For JS, is still learning
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
+    <!--作品-->
     <div class="section beijingtu4">
         <div class="slide">
             <div class="hang4 row">
-                <h3 class="work-title">PORTFOLIO</h3>
-                <div class="work-tu col-lg-3 col-sm-6 col-xs-12">
+                <h3 class="work-title">PORTFOLIO(PS&H5)</h3>
+
+                <div class="work-small">
+                    <ul>
+                        <li><a href="image/maikefeng.jpg">one</a></li>
+                        <li><a href="image/APP.jpg">two</a></li>
+                        <li><a href="image/ping.jpg">three</a></li>
+                        <li><a href="image/yidongduan.jpg">four</a></li>
+                        <li><a href="img/ps5.jpg">five</a></li>
+                        <li><a href="img/ps1.jpg">six</a></li>
+                        <li><a href="tianmaophone/首页/yidongduan.html">seven</a></li>
+                        <li><a href="unk/首页/shouye.html">eight</a></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="work-tu col-lg-3 col-sm-3 col-xs-12">
                     <a href="image/maikefeng.jpg">
                         <img src="img/ps2.jpg" alt="">
                     </a>
                     <div class="worktu-zhe"></div>
                 </div>
-                <div class="work-tu col-lg-3 col-sm-6 col-xs-12">
+                <div class="work-tu col-lg-3 col-sm-3 col-xs-12">
                     <a href="image/APP.jpg">
                         <img src="img/wangye1.jpg" alt="">
                     </a>
                     <div class="worktu-zhe"></div>
                 </div>
-                <div class="work-tu col-lg-3 col-sm-6 col-xs-12">
+                <div class="work-tu col-lg-3 col-sm-3 col-xs-12">
                     <a href="image/ping.jpg">
                         <img src="img/ps3.jpg" alt="">
                     </a>
                     <div class="worktu-zhe"></div>
                 </div>
-                <div class="work-tu col-lg-3 col-sm-6 col-xs-12">
+                <div class="work-tu col-lg-3 col-sm-3 col-xs-12">
                     <a href="image/yidongduan.jpg">
                         <img src="img/wangy2.jpg" alt="">
                     </a>
                     <div class="worktu-zhe"></div>
                 </div>
 
-                <div class="work-tu col-lg-3 col-sm-6 col-xs-12">
+                <div class="work-tu col-lg-3 col-sm-3 col-xs-12">
                     <a href="img/ps5.jpg">
                         <img src="img/ps5.jpg" alt="">
                     </a>
                     <div class="worktu-zhe"></div>
                 </div>
-                <div class="work-tu col-lg-3 col-sm-6 col-xs-12">
+                <div class="work-tu col-lg-3 col-sm-3 col-xs-12">
                     <a href="img/ps1.jpg">
                         <img src="img/ps1.jpg" alt="">
                     </a>
                     <div class="worktu-zhe"></div>
                 </div>
-                <div class="work-tu col-lg-3 col-sm-6 col-xs-12">
-                    <a href="天猫移动端/首页/yidongduan.html">
+                <div class="work-tu col-lg-3 col-sm-3 col-xs-12">
+                    <a href="tianmaophone/首页/yidongduan.html">
                         <img src="img/h54.jpg" alt="">
                     </a>
                     <div class="worktu-zhe"></div>
 
                 </div>
-                <div class="work-tu col-lg-3 col-sm-6 col-xs-12">
-                    <a href="优逸客/首页/shouye.html">
+                <div class="work-tu col-lg-3 col-sm-3 col-xs-12">
+                    <a href="unk/首页/shouye.html">
                         <img src="img/h52.jpg" alt="">
                     </a>
                     <div class="worktu-zhe"></div>
                 </div>
 
-                <!--<div class="work-tu col-lg-3 col-sm-6 col-xs-12">-->
-                <!--<a href="天猫作业/tianmao.html">-->
-                <!--<img src="img/tianmao.jpg" alt="">-->
-                <!--</a>-->
-                <!--<div class="worktu-zhe"></div>-->
-                <!--</div>-->
-                <!--<div class="work-tu col-lg-3 col-sm-6 col-xs-12">-->
-                <!--<a href="响应式/pingguo.html">-->
-                <!--<img src="img/pingguo.jpg" alt="">-->
-                <!--</a>-->
-                <!--<div class="worktu-zhe"></div>-->
-                <!--</div>-->
+            </div>
+        </div>
+        <div class="slide">
+            <div class="hang4 row">
+                <h3 class="work-title">PORTFOLIO(JS)</h3>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url('img/banner-tou.jpg')"></div>
+                        <div class="swiper-slide" style="background-image:url('img/banner-tou.jpg')"></div>
+                        <div class="swiper-slide" style="background-image:url('img/banner-tou.jpg')"></div>
+                        <div class="swiper-slide" style="background-image:url('img/banner-tou.jpg')"></div>
+                        <div class="swiper-slide" style="background-image:url('img/banner-tou.jpg')"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
 
             </div>
         </div>
-        <div class="slide">第三屏的第二屏</div>
         <div class="slide">第三屏的第三屏</div>
         <div class="slide">第三屏的第四屏</div>
     </div>
-
-    <div class="section">
-        <!-- 联系开始 -->
-        <div class="beijingtu3">
-            <div class="zhezhao3">
-                <div class="hang5 row">
-                    <h3 class="contact-title">CONTACT</h3>
-                    <div class="contact-left col-lg-5 col-sm-5 col-xs-12">
-                        <div class="say">
-                            Say hi to me
-                        </div>
-                        <div class="line1"></div>
-                        <div class="address">
-                            No. 25 South Peak Road <br>
-                            Wanbailin District <br>
-                            Taiyuan, Shanxi
-                        </div>
-                        <div class="address">
-                            TEL: <br>
-                            18834567893
-                        </div>
-                        <div class="address">
-                            EMAL: <br>
-                            2430960358@qq.com
-                        </div>
+    <!-- 联系开始 -->
+    <div class="section beijingtu3">
+        <div class="zhezhao3">
+            <div class="hang5 row">
+                <h3 class="contact-title">CONTACT</h3>
+                <div class="contact-left col-lg-5 col-sm-5 col-xs-12">
+                    <div class="say">
+                        Say hi to me
                     </div>
-                    <div class="contact-right col-lg-7 col-sm-7 col-xs-12">
-                        <div class="say">
-                            Drop me a line
-                        </div>
-                        <div class="line2"></div>
-                        <div class="biaodan">
-                            <input type="text" class="name" placeholder="NAME">
-                            <input type="text" class="emal" placeholder="EMAL">
-                            <textarea name="" id="" cols="30" rows="10" class="liuyan" placeholder="MESSAGE"></textarea>
-                        </div>
+                    <div class="line1"></div>
+                    <div class="address">
+                        No. 25 South Peak Road <br>
+                        Wanbailin District <br>
+                        Taiyuan, Shanxi
+                    </div>
+                    <div class="address">
+                        TEL: <br>
+                        18834567893
+                    </div>
+                    <div class="address">
+                        EMAL: <br>
+                        2430960358@qq.com
+                    </div>
+                </div>
+                <div class="contact-right col-lg-7 col-sm-7 col-xs-12">
+                    <div class="say">
+                        Drop me a line
+                    </div>
+                    <div class="line2"></div>
+                    <div class="biaodan">
+                        <input type="text" class="name" placeholder="NAME">
+                        <input type="text" class="emal" placeholder="EMAL">
+                        <textarea name="" id="" cols="30" rows="10" class="liuyan" placeholder="MESSAGE"></textarea>
                     </div>
                 </div>
             </div>
@@ -269,4 +350,21 @@
     </div>
 </div>
 </body>
+<script>
+    //作品轮播栏
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true
+        }
+    })
+</script>
 </html>

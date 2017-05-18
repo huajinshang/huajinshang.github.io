@@ -107,7 +107,7 @@ html.fp-enabled,
     position: fixed;
     z-index: 100;
     margin-top: -32px;
-    top: 50%;
+    top: 80%;
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
 }
@@ -166,6 +166,7 @@ html.fp-enabled,
     width: 12px;
     margin: -6px 0 0 -6px;
     border-radius: 100%;
+    border:1px solid #fff;
  }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
