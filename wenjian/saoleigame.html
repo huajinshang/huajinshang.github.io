@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>扫雷游戏</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: url("image/leibg.jpeg") ;
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+        }
+
+        .scene {
+            width: 500px;
+            height: 500px;
+            border-top: 1px solid #999;
+            border-left: 1px solid #999;
+            margin: 0 auto;
+            user-select: none;
+            position: relative;
+        }
+
+        .mask {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background: rgba(69, 69, 69, 0.62);
+            z-index: 20;
+            /*display: none;*/
+            user-select: none;
+            cursor: pointer;
+        }
+
+        .cmask {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .win {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: none;
+        }
+
+        .wintu {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background: url("image/win.gif") center center no-repeat;
+            background-size: cover;
+        }
+
+        .wenzi {
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 30px;
+            position: absolute;
+            bottom: 30px;
+            margin: auto;
+            color: #fff;
+            font-family: "Comic Sans MS";
+        }
+
+        .gameover {
+            content: "";
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background: url("image/gameover.jpg") center center no-repeat;
+            background-size: cover;
+            z-index: 10;
+            display: none;
+        }
+
+        .start {
+            width: 150px;
+            height: 60px;
+            border-radius: 10px;
+            background: #aaa;
+            font-size: 25px;
+            text-align: center;
+            line-height: 60px;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: none;
+        }
+
+        .block {
+            width: 49px;
+            height: 49px;
+            float: left;
+            background: #666;
+            border-right: 1px solid #999;
+            border-bottom: 1px solid #999;
+        }
+
+        .show {
+            background: url("image/lei3.png") center center no-repeat;
+            background-size: cover;
+        }
+
+        .num {
+            background: #ddd;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+        }
+
+        .control {
+            width: 120px;
+            height: auto;
+            position: absolute;
+            right: 50%;
+            top: 10px;
+            margin-right: -410px;
+        }
+
+        .control input {
+            height: 35px;
+            margin: 10px;
+        }
+
+        .control time {
+            display: block;
+            height: 35px;
+            margin: 10px;
+        }
+
+        .flag {
+            background: url("image/flsg.png") center center no-repeat;
+            background-size: cover;
+        }
+
+        .chose {
+            width: 400px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .chose div {
+            width: 100px;
+            height: 50px;
+            border-radius: 10px;
+            background: #aaa;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            color: #fff;
+            float: left;
+            margin-right: 50px;
+        }
+        .ph{
+            width:220px;
+            height:250px;
+            background: #CCCCCC;
+            position: absolute;
+            top:200px;
+            left:-50px;
+            display: none;
+        }
+        .ph-row{
+            width:100%;
+            height:82px;
+            border-bottom:1px solid #333;
+        }
+        .ph-left{
+            width:29px;
+            height:100%;
+            border-right: 1px solid #666;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+        }
+        .ph-right{
+            width:190px;
+            height:100%;
+            float: right;
+        }
+        .ph-right div{
+            width:100%;
+            height:33.33%;
+        }
+        .flagnum{
+            height: 30px;
+            /*margin: 10px;*/
+            color:red
+        }
+    </style>
+    <script src="js/jQuery.js"></script>
+    <script>
+        $(document).ready(function () {
+            var lnum;
+            var num;
+            var t;
+            var lnumgailv;
+            var ph;
+            $("#bang").click(function () {
+                $(".ph").slideToggle(500);
+            });
+            $(".chose div").click(function () {
+                num = lnum = 10 + 5 * ($(this).index());
+                ph = $(this).index();
+//                console.log(paihang);
+                $(".scene").empty();
+                creatLei();
+                $(".flagnum").html("flag:" + num);
+                $(".start").show();
+                $(".chose").hide();
+                return lnum;
+            });
+            //页面刚开始
+            $(".start").click(function () {
+                start();
+                $(".start").hide();
+                $(".mask").slideToggle();
+            });
+            //重新开始按钮
+            $("#newStart").click(function () {
+                start();
+                creatLei();
+                $(".flagnum").html("flag:" + lnum);
+                num = lnum;
+                $(".mask").slideUp(500);
+            });
+            //定义一个游戏开始函数
+            function start() {
+                second = 0;
+                minute = 0;
+                $("time>span:nth-child(1)").html("00");
+                $("time>span:nth-child(3)").html("00");
+                $(".cmask").slideToggle(500);
+                t = setInterval(time, 1000);
+            }
+
+            var overTime;
+            //定义一个游戏结束函数
+            function gameOver() {
+                $(".mask").slideDown(500);
+                $(".gameover").show();
+                $(".chose").hide();
+                $(".win").hide();
+                clearInterval(t);
+                $(".cmask").slideToggle(500);
+            }
+
+            //定义一个游戏获胜函数
+            function win() {
+                $(".mask").slideDown(500);
+                $(".win").show();
+                clearInterval(t);
+                $(".cmask").slideToggle(500).queue(function () {
+                    paihangbang();
+                    $(this).dequeue();
+                });
+                overTime = $("time>span:nth-child(1)").html() + ":" + $("time>span:nth-child(3)").html();
+//                console.log(ph, overTime);
+                reWrite();
+            }
+
+            //难度选择
+            $("#difficult").click(function () {
+                $(".mask").slideDown(500);
+                $(".start").hide();
+                $(".gameover").hide();
+                $(".chose").show();
+            });
+
+            //创建雷函数
+            function creatLei() {
+                console.log(lnum);
+                lnumgailv = (100 - lnum) / 100;
+                do {
+                    $(".scene").empty();
+                    for (var i = 0; i < 10; i++) {
+                        for (var j = 0; j < 10; j++) {
+                            var isLei = Math.random() > lnumgailv;    //概率
+                            //console.log(isLei)
+                            $("<div>")
+                                    .addClass(function () {
+                                        if (isLei) {
+                                            return "block lei"
+                                        } else {
+                                            return "block";
+                                        }
+                                    })
+                                    .attr("id", i + "-" + j)     //添加坐标id
+                                    .data("pos", {x: i, y: j})      //保存坐标
+                                    .mousedown(mousedownEvent)  //添加点击事件
+                                    .appendTo(".scene");     //追加元素
+                        }
+                    }
+                } while ($(".lei").length != lnum);       //控制有15个
+            }
+
+            function mousedownEvent(e) {
+                //e.which 通过which来判断左击和右击，左击为1，右击为3
+                if (e.which == 1) {
+                    leftclick.call(this)
+                } else {
+                    rightclick.call(this);  //用call改变this指针
+                }
+            }
+
+            function leftclick() {
+                //如果已右击，则不允许左击
+                if ($(this).hasClass("flag")) {
+                    return;
+                }
+                //如果猜中雷，让所有雷显现，添加show类名
+                if ($(this).hasClass("lei")) {
+                    $(".lei").addClass("show");
+                    gameOver();
+                } else {
+                    $(this).addClass("num");
+                    var pos = $(this).data("pos");
+                    var n = 0;
+                    for (var i = pos.x - 1; i <= pos.x + 1; i++) {
+                        for (var j = pos.y - 1; j <= pos.y + 1; j++) {
+                            if ($("#" + i + "-" + j).hasClass("lei")) {
+                                n++;
+                            }
+                        }
+                    }
+                    if (n == 0) {
+                        $(this).html();     //将数字添加进页面
+                    } else {
+                        $(this).html(n);     //将数字添加进页面
+                    }
+                    if (n == 0) {
+                        //判断该元素周围的元素
+                        for (var i = pos.x - 1; i <= pos.x + 1; i++) {
+                            for (var j = pos.y - 1; j <= pos.y + 1; j++) {
+                                var obj = $("#" + i + "-" + j);
+                                if (obj.length == 1 && !obj.hasClass("num")) {
+                                    leftclick.call(obj[0]);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            function rightclick() {
+                //如果已左击，则不允许右击
+                if ($(this).hasClass("num")) {
+                    return;
+                }
+                //旗子判断
+                if ($(this).hasClass("flag")) {
+                    $(this).removeClass("flag");
+                    num++;
+                    $(".flagnum").html("flag:" + num);
+                } else {
+                    $(this).addClass("flag");
+                    num--;
+                    $(".flagnum").html("flag:" + num);
+                    if (num < 0) {
+                        gameOver();
+                        $(".flag").removeClass("flag");
+                        num++;
+                        return;
+                    }
+                    $(this).addClass("flag");
+                    if (num == 0) {
+                        if ($(".flag").filter(".lei").length == lnum) {
+                            win();
+                        }
+                    }
+                }
+            }
+
+            //清除浏览器默认右击事件
+            $(document).on("contextmenu", function (e) {
+                e.preventDefault();
+            });
+
+
+            //计时函数
+            var second = 0;
+            var minute = 0;
+
+            function time() {
+                $("time>span:nth-child(3)").html(function () {
+                    if (second == 0) {
+                        second = "0" + second;
+                    }
+                    if (second < 9) {
+                        second++;
+                        second = "0" + second;
+                    } else {
+                        second++;
+                        if (second > 60) {
+                            second = 0;
+                        }
+                    }
+                    return second;
+                });
+                $("time>span:nth-child(1)").html(function () {
+                    if (second == 0) {
+                        minute++;
+                        if (minute < 9) {
+                            minute = "0" + minute;
+                            return minute;
+                        } else {
+                            return minute;
+                        }
+                    }
+                })
+            }
+
+            //排行榜
+            var player;
+            var bestscor0 = localStorage.bestscor0 ? JSON.parse(localStorage.bestscor0) : [];
+            var bestscor1 = localStorage.bestscor1 ? JSON.parse(localStorage.bestscor1) : [];
+            var bestscor2 = localStorage.bestscor2 ? JSON.parse(localStorage.bestscor2) : [];
+            function paihangbang() {
+                if (ph == 0) {
+                    if (bestscor0.length < 3 || (bestscor0.length >= 3 && overTime > bestscor0[2].scor)) {
+                        player = prompt("请输入姓名");
+                        bestscor0.push({player, scor: overTime});
+                        bestscor0.sort(function (a, b) {
+                            if (a.scor > b.scor) {
+                                return 1;
+                            } else {
+                                return -1;
+                            }
+                        });
+                    }
+                    if (bestscor0.length > 3) {
+                        bestscor0.pop();
+                    }
+                    localStorage.bestscor0 = JSON.stringify(bestscor0); //转化为字符串进行存放
+                }
+                if (ph == 1) {
+                    if (bestscor1.length < 3 || (bestscor1.length >= 3 && overTime > bestscor1[2].scor)) {
+                        player = prompt("请输入姓名");
+                        bestscor1.push({player, scor: overTime});
+                        bestscor1.sort(function (a, b) {
+                            if (a.scor > b.scor) {
+                                return 1;
+                            } else {
+                                return -1;
+                            }
+                        });
+                    }
+                    if (bestscor1.length > 3) {
+                        bestscor1.pop();
+                    }
+                    localStorage.bestscor1 = JSON.stringify(bestscor1); //转化为字符串进行存放
+                }
+                if (ph == 2) {
+                    if (bestscor2.length < 3 || (bestscor2.length >= 3 && overTime > bestscor2[2].scor)) {
+                        player = prompt("请输入姓名");
+                        bestscor2.push({player, scor: overTime});
+                        bestscor2.sort(function (a, b) {
+                            if (a.scor > b.scor) {
+                                return 1;
+                            } else {
+                                return -1;
+                            }
+                        });
+                    }
+                    if (bestscor2.length > 3) {
+                        bestscor2.pop();
+                    }
+                    localStorage.bestscor2 = JSON.stringify(bestscor2); //转化为字符串进行存放
+                }
+            }
+            var ph1=document.querySelectorAll(".ph1>div");
+            var ph2=document.querySelectorAll(".ph2>div");
+            var ph3=document.querySelectorAll(".ph3>div");
+//            console.log(ph1,ph2,ph3);
+            //往排行榜放置内容
+            function reWrite() {
+                bestscor0 = localStorage.bestscor0 ? JSON.parse(localStorage.bestscor0) : [];
+                bestscor1 = localStorage.bestscor1 ? JSON.parse(localStorage.bestscor1) : [];
+                bestscor2 = localStorage.bestscor2 ? JSON.parse(localStorage.bestscor2) : [];
+                bestscor0.forEach(function (v,i) {    //遍历成绩
+                    ph1[i].innerHTML=`${v.player}&nbsp&nbsp&nbsp&nbsp${v.scor}`;  //添加到页面中
+                });
+                bestscor1.forEach(function (v,i) {    //遍历成绩
+                    ph2[i].innerHTML=`${v.player}&nbsp&nbsp&nbsp&nbsp${v.scor}`;  //添加到页面中
+                });
+                bestscor2.forEach(function (v,i) {    //遍历成绩
+                    ph3[i].innerHTML=`${v.player}&nbsp&nbsp&nbsp&nbsp${v.scor}`;  //添加到页面中
+                })
+            }
+            reWrite();
+
+        });
+    </script>
+</head>
+<body>
+<div class="mask">
+    <div class="win">
+        <div class="wintu"></div>
+        <div class="wenzi">You Win</div>
+    </div>
+    <div class="start">开始游戏</div>
+    <div class="gameover"></div>
+    <div class="chose">
+        <div class="easy">容易</div>
+        <div class="general">一般</div>
+        <div class="heard" style="margin-right: 0;">困难</div>
+    </div>
+</div>
+<div class="scene"></div>
+<div class="control">
+    <div class="cmask"></div>
+    <time>
+        <span>00</span>
+        <span>:</span>
+        <span>00</span>
+    </time>
+    <input type="button" value="重新开始" id="newStart">
+    <input type="button" value="难度选择" id="difficult">
+    <div class="flagnum">flag:15</div>
+    <input type="button" value="排行榜" id="bang">
+    <div class="ph">
+        <div class="ph-row jiandan">
+            <div class="ph-left">简单</div>
+            <div class="ph-right ph1">
+                <div class="phone"></div>
+                <div class="phtwo"></div>
+                <div class="phtwo"></div>
+            </div>
+        </div>
+        <div class="ph-row yiban">
+            <div class="ph-left">一般</div>
+            <div class="ph-right ph2" >
+                <div class="phone"></div>
+                <div class="phtwo"></div>
+                <div class="phtwo"></div>
+            </div>
+        </div>
+        <div class="ph-row kunnan" style="border-bottom:0">
+            <div class="ph-left">困难</div>
+            <div class="ph-right ph3">
+                <div class="phone"></div>
+                <div class="phtwo"></div>
+                <div class="phtwo"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

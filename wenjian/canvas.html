@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.6canvas1绘制正多边形</title>
+    <link rel="stylesheet" href="css/iconfont.css">
+    <style>
+        @font-face {
+            font-family: 'iconfont';  /* project id 305330 */
+            src: url('//at.alicdn.com/t/font_yrbrk4vmrxdpldi.eot');
+            src: url('//at.alicdn.com/t/font_yrbrk4vmrxdpldi.eot?#iefix') format('embedded-opentype'),
+            url('//at.alicdn.com/t/font_yrbrk4vmrxdpldi.woff') format('woff'),
+            url('//at.alicdn.com/t/font_yrbrk4vmrxdpldi.ttf') format('truetype'),
+            url('//at.alicdn.com/t/font_yrbrk4vmrxdpldi.svg#iconfont') format('svg');
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        canvas {
+            display: block;
+            background: #ccc;
+            margin: 0 auto;
+        }
+        .menu{
+            width:250px;
+            background: #aaaaaa;
+            height: 600px;
+            position: absolute;
+            left:0;
+            top:0;
+            padding: 30px 20px 20px 10px;
+            background-image: linear-gradient(135deg,#aaa 30%,#555 100%);
+
+        }
+        .menu ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            width:100%;
+            height:100%;
+        }
+        .menu ul li{
+            list-style: none;
+            width:100%;
+            height: 50px;
+            /*line-height: 50px;*/
+            text-align: center;
+            padding:0 15px;
+            vertical-align: middle;
+            position: relative;
+        }
+        .menu ul li p{
+            display: inline;
+            float: left;
+            font-size: 18px;
+            user-select: none;
+            color: #fff;
+            font-family: "楷体";
+        }
+        .menu ul li select{
+            width: 65px;
+            display: inline-block;
+            float: right;
+        }
+        .menu ul li input:not([type=button]){
+            width: 60px;
+            display: inline-block;
+            float: right;
+        }
+        input[type=button]{
+            display: block;
+            width: 150px;
+            height:30px;
+            background: #666;
+            color: #fff;
+            border:0;
+            margin:0 auto;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <canvas width="600px" height="600px"></canvas>
+    <div class="menu">
+        <ul>
+            <li class="color">
+                <p><i class="iconfont">&#xe624;</i>&nbsp选择样式:</p>
+                <select name="" id="shape">
+                    <option value="rect">矩形</option>
+                    <option value="line">直线</option>
+                    <option value="circleIn">内切圆</option>
+                    <option value="circleOut">外接圆</option>
+                    <option value="circleCenter">中心圆</option>
+                    <option value="poly">多边形</option>
+                    <option value="pen">铅笔</option>
+                    <option value="eraser">橡皮擦</option>
+                </select>
+            </li>
+            <li>
+                <p><i class="iconfont">&#xe61d;</i>&nbsp选择填充:</p>
+                <select name="" id="style">
+                    <option value="stroke">描边</option>
+                    <option value="fill">填充</option>
+                </select>
+            </li>
+            <li>
+                <p><i class="iconfont">&#xe6d4;</i>&nbsp选择颜色:</p>
+                <input type="color" id="color">
+            </li>
+            <li>
+                <p><i class="iconfont">&#xe704;</i>&nbsp选择线宽:</p>
+                <input type="number" id="width" value="2" step="2" max="20" min="2">
+            </li>
+            <li>
+                <p><i class="iconfont">&#xe612;</i>&nbsp边数:</p>
+                <input type="number" id="said" value="3" max="12" min="3">
+            </li>
+            <li>
+                <input type="button" value="撤销" id="chexiao">
+            </li>
+            <li>
+                <input type="button" value="保存" id="save">
+            </li>
+            <li>
+                <input type="button" value="清空" id="clear">
+            </li>
+        </ul>
+
+    </div>
+</body>
+<script src="js/draw.js"></script>
+    <script>
+        var canvas = document.querySelector("canvas");
+        var huabi = canvas.getContext("2d");
+
+        var shape=document.querySelector("#shape");
+        var style=document.querySelector("#style");
+        var color=document.querySelector("#color");
+        var width=document.querySelector("#width");
+        var said=document.querySelector("#said");
+        var s="rect";       //设置默认值
+        shape.onchange=function () {        //当内容改变并失去焦点
+            s=this.value;
+        };
+        var st="stroke";
+        style.onchange=function () {
+            st=this.value;
+        };
+        var c="#000";
+        color.onchange=function () {
+            c=this.value;
+        };
+        var w=2;
+        width.onchange=function () {
+            w=this.value;
+        };
+        var si=3;
+        said.onchange=function () {
+            si=this.value;
+        };
+        
+        var data=[];    //声明为数组，存放历史记录
+        canvas.onmousedown=function (e) {
+            var ox=e.offsetX;
+            var oy=e.offsetY;
+            var draw=new Draw(huabi,{style:st,color:c,width:w});        //实例化函数，并且传参
+            if(s=="pen"){       //铅笔
+                huabi.beginPath();
+                huabi.moveTo(ox,oy);
+            }
+            canvas.onmousemove=function (e) {
+                var mx=e.offsetX;
+                var my=e.offsetY;
+                if(s!="eraser"){    //橡皮
+                    huabi.clearRect(0,0,600,600);       //清除画布
+                    if(data.length!=0){
+                        huabi.putImageData(data[data.length-1],0,0,0,0,600,600);    //放置之前的画品
+                        //参数：（名称，要放置的坐标，要放置的东西的坐标及宽高）
+                    }
+                }
+                draw[s](ox,oy,mx,my,si);       //根据s的值调用不同的函数方法
+            };
+            document.onmouseup=function () {
+                canvas.onmousemove=null;
+                document.onmouseup=null;
+                data.push(huabi.getImageData(0,0,600,600)); //存储刚画好的东西
+                //参数：（要取的坐标起点，及区域宽高）
+            };
+        };
+
+        //恢复历史记录
+        var chexiao=document.querySelector("#chexiao");
+        chexiao.onclick=function () {
+            if(data.length==0){
+                alert("已无记录");
+            }
+            huabi.clearRect(0,0,600,600);
+            data.pop();     //删除最后一个
+            if(data.length==0){
+                return;
+            }
+            huabi.putImageData(data[data.length-1],0,0);
+        };
+
+        //保存
+        var save=document.querySelector("#save");
+        save.onclick=function () {
+           var r=canvas.toDataURL();  //保存的图像地址
+            location.assign(r);
+        };
+        //清空
+        var clear=document.querySelector("#clear");
+        clear.onclick=function () {
+            huabi.clearRect(0,0,600,600);
+            data=[];
+        }
+    </script>
+</html>

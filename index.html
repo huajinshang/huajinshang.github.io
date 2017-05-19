@@ -19,6 +19,8 @@
     <!--作品轮播css/js-->
     <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
     <script src="js/swiper-3.4.2.min.js"></script>
+    <link rel="stylesheet" href="css/imageflow.css">
+    <script src="js/imageflow.js"></script>
 
     <script>
         $(function () {
@@ -237,7 +239,6 @@
                 </div>
 
 
-
                 <div class="work-tu col-lg-3 col-sm-3 col-xs-12">
                     <a href="image/maikefeng.jpg">
                         <img src="img/ps2.jpg" alt="">
@@ -293,21 +294,74 @@
         </div>
         <div class="slide">
             <div class="hang4 row">
-                <h3 class="work-title">PORTFOLIO(JS)</h3>
+                <h3 class="work-title">PORTFOLIO(other)</h3>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background-image:url('img/banner-tou.jpg')"></div>
-                        <div class="swiper-slide" style="background-image:url('img/banner-tou.jpg')"></div>
-                        <div class="swiper-slide" style="background-image:url('img/banner-tou.jpg')"></div>
-                        <div class="swiper-slide" style="background-image:url('img/banner-tou.jpg')"></div>
-                        <div class="swiper-slide" style="background-image:url('img/banner-tou.jpg')"></div>
+                        <div class="swiper-slide" style="background-image:url('img/todu.jpg')">
+                            <a href="wenjian/markdown.html"></a>
+                        </div>
+                        <div class="swiper-slide" style="background-image:url('img/huitu.jpg')">
+                            <a href="wenjian/canvas.html"></a>
+                        </div>
+                        <div class="swiper-slide" style="background-image:url('img/saolei.jpg')">
+                            <a href="wenjian/saoleigame.html"></a>
+                        </div>
+                        <div class="swiper-slide" style="background-image:url('img/dazi.jpg')">
+                            <a href="wenjian/dazigame.html"></a>
+                        </div>
+
+                        <div class="swiper-slide" style="background-image:url('img/fanke1.jpg')">
+                            <a href="fanke/fanke.html"></a>
+                        </div>
+                        <div class="swiper-slide" style="background-image:url('img/xiaomi1.jpg')">
+                            <a href="xiaomi/ricexiugai.html"></a>
+                        </div>
+                        <div class="swiper-slide" style="background-image:url('img/yidong1.jpg')">
+                            <a href="yidong/index.html"></a>
+                        </div>
+                        <div class="swiper-slide" style="background-image:url('img/pingguo1.jpg')">
+                            <a href="pingguo/pingguo.html"></a>
+                        </div>
+                        <div class="swiper-slide" style="background-image:url('img/jingdong1.jpg')">
+                            <a href="jingdong/index.html"></a>
+                        </div>
+                        <div class="swiper-slide" style="background-image:url('img/sofa.png')">
+                            <a href="sofa/index.html"></a>
+                        </div>
+                        <div class="swiper-slide" style="background-image:url('img/weierjia.png')">
+                            <a href="qiyezzhan/html/index.html"></a>
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
 
             </div>
         </div>
-        <div class="slide">第三屏的第三屏</div>
+        <!--第三屏-->
+        <div class="slide">
+            <div class="hang4 row">
+                <h3 class="work-title">PORTFOLIO(JS/jQuery)</h3>
+                <div id="starsIF" class="imageflow">
+                    <!--<a href="fanke/fanke.html"><img src="img/fanke1.jpg" longdesc="#" width="280" height="300" alt="Picture" /></a>-->
+                    <!--<a href="xiaomi/ricexiugai.html"><img src="img/xiaomi1.jpg" longdesc="#" width="280" height="300" alt="Picture" /></a>-->
+                    <!--<a href="yidong/index.html"><img src="img/yidong1.jpg" longdesc="#" width="280" height="300" alt="Picture" /></a>-->
+                    <!--<a href="pingguo/pingguo.html"><img src="img/pingguo1.jpg" longdesc="#" width="280" height="300" alt="Picture" /></a>-->
+                    <!--<a href="jingdong/index.html"><img src="img/jingdong1.jpg" longdesc="#" width="280" height="300" alt="Picture" /></a>-->
+                    <!--<a href="sofa/index.html"><img src="img/sofa.png" longdesc="#" width="280" height="300" alt="Picture" /></a>-->
+                    <!--<a href="qiyezzhan/html/index.html"><img src="img/weierjia.png" longdesc="#" width="280" height="300" alt="Picture" /></a>-->
+
+                    <img src="img/fanke1.jpg" longdesc="#" width="280" height="300" alt="Picture"/>
+                    <img src="img/xiaomi1.jpg" longdesc="#" width="280" height="300" alt="Picture" />
+                    <img src="img/yidong1.jpg" longdesc="#" width="280" height="300" alt="Picture" />
+                    <img src="img/pingguo1.jpg" longdesc="#" width="280" height="300" alt="Picture" />
+                    <img src="img/jingdong1.jpg" longdesc="#" width="280" height="300" alt="Picture" />
+                    <img src="img/sofa.png" longdesc="#" width="280" height="300" alt="Picture" />
+                    <img src="img/weierjia.png" longdesc="#" width="280" height="300" alt="Picture" />
+                    <div class="zhezhao-image"></div>
+                </div>
+
+            </div>
+        </div>
         <div class="slide">第三屏的第四屏</div>
     </div>
     <!-- 联系开始 -->
@@ -365,6 +419,19 @@
             modifier: 1,
             slideShadows: true
         }
-    })
+    });
+
+
+
+//    轮播图片
+    $("#starsIF img").each(function (i,v) {
+       if(i==0){
+           $(this).click(function () {
+               console.log(v)
+           })
+       }
+    });
+
+
 </script>
 </html>
