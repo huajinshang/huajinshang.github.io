@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>打字游戏</title>
+    <link rel="stylesheet" href="css/animate.css">
     <style>
         html, body {
             height: 100%;
@@ -180,10 +181,52 @@
             height: 33.33%;
             text-align: left;
         }
+        .s1 {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .enter {
+            width: 600px;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            transition: all .5s;
+            animation: shake 7s linear infinite;
+        }
+
+        .enter input {
+            width: 200px;
+            height: 50px;
+            background: #A6E24D;
+            border-radius: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            bottom: 60px;
+            outline: none;
+            border-color: #1cce14;
+        }
     </style>
 </head>
 <body>
 <div class="scene">
+    <div class="s1">
+        <div class="enter">
+            <img src="img/logo.png" alt="">
+            <input type="button" value="进入游戏">
+        </div>
+    </div>
     <div class="paihang">
         <div class="paik">
             <div class="pai-title">排行榜</div>
@@ -528,7 +571,13 @@
         paik.style.display = "none";
     };
 
-
+    //开头
+    var s1 = document.querySelector(".s1");
+    var button = document.querySelector(".enter input");
+    var enter = document.querySelector(".enter");
+    button.onclick = function () {
+        s1.style.display = "none"
+    }
 
 </script>
 </html>
