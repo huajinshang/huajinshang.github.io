@@ -113,10 +113,10 @@ a:focus { outline: none; }
 
 /*基本信息*/
 
-/*.icon-infomation img{*/
-    /*vertical-align: middle;*/
-    /*margin-bottom: 10px;*/
-/*}*/
+.icon-infomation img{
+    width: 200px;
+    height:130px;
+}
 .icon-infomation p{
     font-size: 12px;
     text-align: center;
