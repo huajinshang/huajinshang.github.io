@@ -1,0 +1,312 @@
+.box{
+	width: 100%;
+	overflow: hidden;
+	background: #F1F1F1;
+}
+.top{
+	width: 100%;
+	height: 2.14rem;
+	background: #FAF7F7;
+	padding: 0.2rem 0.3rem 0.35rem;
+}
+.zuo{
+	width: 2.6rem;
+	height: 100%;
+	float: left;
+}
+.zuo1{
+	width: 0.6rem;
+	height: 0.6rem;
+	background: url('../img/cacaca_03.png')center center no-repeat;
+	background-size: 100%;
+	float: left;
+	margin-bottom: 0.22rem;
+}
+.zuo2{
+	width: 2.55rem;
+	height: 0.32rem;
+	background: url('../img/cacaca_09.png')center center no-repeat;
+	background-size: 100%;
+	float: left;
+	margin-bottom: 0.22rem;
+}
+.zuo3{
+	width: 1.41rem;
+	height: 0.23rem;
+	background: url('../img/cacaca_15.png')center center no-repeat;
+	background-size: 100%;
+	float: left;
+}
+.you{
+	width: 1.14rem;
+	height: 100%;
+	float: right;
+}
+.you1{
+	width: 0.92rem;
+	height: 0.89rem; 
+	float: right;
+	background: url('../img/cacaca_06.png')center center no-repeat;
+	background-size: 100%;
+	margin-bottom: 0.4rem;
+}
+.you2{
+	width: 1.14rem;
+	height: 0.44rem; 
+	float: right;
+	background: url('../img/cacaca_14.png')center center no-repeat;
+	background-size: 100%;
+}
+.liaotian{
+	width: 100%;
+	overflow: hidden;
+	padding: 0.55rem 0.3rem 0.36rem;
+	background: #F1F1F1;
+}
+.diyi{
+	width: 3.36rem;
+	height: 1.2rem;
+	float: left;
+}
+.diyis{
+	width: 3.11rem;
+	height: 1.2rem;
+	float: left;
+	background: url('../img/liuliu_03.png')center center no-repeat;
+	background-size: 100%;
+}
+.dier{
+	margin-top: 0.2rem;
+	width: 3.83rem;
+	height: 2.2rem;
+	float: right;
+	background: url('../img/liuliu_06.png')center center no-repeat;
+	background-size: 100%;
+}
+.disan{
+	margin-top: 0.2rem;
+	width: 5.39rem;
+	height: 1.28rem;
+	float: left;
+	background: url('../img/liuliu_09.png')center center no-repeat;
+	background-size: 100%;
+}
+.disi{
+	margin-top: 0.2rem;
+	width: 4.54rem;
+	height: 3.25rem;
+	float: right;
+	background: url('../img/maf_03.png')center center no-repeat;
+	background-size: 100%;
+}
+.diwu{
+	margin-top: 0.2rem;
+	width: 3.24rem;
+	height: 0.96rem;
+	float: left;
+	background: url('../img/hua_22.png')center center no-repeat;
+	background-size: 100%;
+}
+.maik{
+	margin-top: 1.5rem;
+	width: 6.9rem;
+	height: 0.76rem;
+	border: 0.03rem solid #E42C46;
+	border-radius: 0.4rem;
+	/* margin: 0 auto; */
+	float: left;
+}
+.zik{
+	margin-top: 0.08rem;
+	width: 1.02rem;
+	height: 0.6rem;
+	border-radius: 0.4rem;
+	font-size: 0.26rem;
+	color: #E42C46;
+	text-align: center;
+	line-height: 0.6rem;
+	float: left;
+	margin-left: 0.2rem;
+}
+.mmm{
+	margin-top: 0.06rem;
+	width: 1.03rem;
+	height: 0.59rem;
+	border-radius: 0.4rem;
+	float: right;
+	margin-right: 0.1rem;
+	background: red;
+	background: url('../img/mai_03.png')center center no-repeat;
+	background-size: 100%;
+}
+.ditb{
+	width: 100%;
+	height: 0.53rem;
+	float: left;
+	margin-top: 0.5rem;
+	display: none;
+}
+.tt1{
+	width: 0.53rem;
+	height: 0.53rem;
+	float: left;
+	background: url('../img/llllll_03.png')center center no-repeat;
+	background-size: 100%;
+
+}
+.tt2{
+	width: 0.53rem;
+	height: 0.53rem;
+	float: left;
+	background: url('../img/llllll_08.png')center center no-repeat;
+	background-size: 100%;
+	margin-left: 1.06rem;
+}
+.tt3{
+	width: 0.53rem;
+	height: 0.53rem;
+	float: left;
+	background: url('../img/llllll_10.png')center center no-repeat;
+	background-size: 100%;
+	margin-left: 1.06rem;
+}
+.tt4{
+	width: 0.39rem;
+	height: 0.53rem;
+	float: left;
+	background: url('../img/llllll_12.png')center center no-repeat;
+	background-size: 100%;
+	margin-left: 1.06rem;
+}
+.tt5{
+	width: 0.53rem;
+	height: 0.53rem;
+	float: left;
+	background: url('../img/llllll_05.png')center center no-repeat;
+	background-size: 100%;
+	margin-left: 1.06rem;
+}
+.diyy{
+	width: 100%;
+	/* height: 0.53rem; */
+	overflow: hidden;
+	float: left;
+	margin-top: 0.5rem; 
+	display: none;
+}
+.zi{
+	width: 100%;
+	height: 1.50rem;
+	float: left;
+}
+.zi ul li:nth-child(1){
+	text-align: center;
+	line-height: 0.4rem;
+	font-size: 0.32rem;
+	color: #000;
+}
+.zi ul li:nth-child(2){
+	text-align: center;
+	line-height: 0.35rem;
+	font-size: 0.32rem;
+	color: #807E7E;
+}
+.zi ul li:nth-child(3){
+	text-align: center;
+	line-height: 0.75rem;
+	font-size: 0.5rem;
+	color: #000;
+}
+.powen{
+	margin-top: 0.5rem;
+	width: 5.11rem;
+	height: 0.64rem;
+	float: left;
+	background: url('../img/cacaca_56.png')center center no-repeat;
+	background-size: 100%;
+	margin-left: 0.89rem;
+}
+.anniu{
+	margin-top: 0.5rem;
+	width: 2.05rem;
+	height: 2.05rem;
+	float: left;
+	background: url('../img/cacaca_60.png')center center no-repeat;
+	background-size: 100%;
+	margin-left: 2.42rem;
+}
+.ditup{
+	width: 100%;
+	/* height: 0.53rem; */
+	overflow: hidden;
+	float: left;
+	margin-top: 0.5rem; 
+}
+.tuwen{
+	width: 2.54rem;
+	height: 0.57rem;
+	float: left;
+	background: url('../img/ms_03.png')center center no-repeat;
+	background-size: 100%;
+}
+.chang{
+	margin-top: 0.3rem; 
+	width: 100%;
+	height: 0.07rem;
+	/* padding: 0 -0.3rem; */
+	float: left;
+	background: url('../img/ccc_03.png')center center no-repeat;
+	background-size: 100%;
+}
+.santu{
+	margin-top: 0.3rem; 
+	width: 100%;
+	height: 2.81rem;
+}
+.tut1{
+	margin-top: 0.5rem; 
+	width: 2.28rem;
+	height: 2.81rem;
+	float: left;
+	background: url('../img/cacaca_48.png')center center no-repeat;
+	background-size: 100%;
+}
+.tut2{
+	margin-top: 0.5rem; 
+	width: 2.28rem;
+	height: 2.81rem;
+	float: left;
+	background: url('../img/cacaca_50.png')center center no-repeat;
+	background-size: 100%;
+}
+.tut3{
+	margin-top: 0.5rem; 
+	width: 2.28rem;
+	height: 2.81rem;
+	float: left;
+	background: url('../img/cacaca_53.png')center center no-repeat;
+	background-size: 100%;
+}
+.xuanze{
+	margin-top: 0.3rem; 
+	width: 100%;
+	height: 0.7rem;
+	float: left;
+}
+.xuanze1{
+	/* margin-top: 0.5rem;  */
+	width: 1.15rem;
+	height: 0.7rem;
+	float: left;
+	background: url('../img/cacaca_66.png')center center no-repeat;
+	background-size: 100%;
+}
+.xuanze2{
+	/* margin-top: 0.5rem;  */
+	width: 1.15rem;
+	height: 0.7rem;
+	float: left;
+	background: url('../img/cacaca_68.png')center center no-repeat;
+	background-size: 100%;
+	margin-left: 0.3rem;
+}

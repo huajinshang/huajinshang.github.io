@@ -1,0 +1,279 @@
+.box{
+	width: 100%;
+	background: #F6F6F6;
+	overflow: hidden;
+	/* position: relative; */
+}
+.top{
+	width: 100%;
+	height: 4.45rem;
+	background: #fff;
+}
+.shang{
+	width: 100%;
+	height: 1.62rem;
+	padding: 0.3rem 0.32rem;
+	/* background: red; */
+}
+.zuo{
+	width: 1.02rem;
+	height: 1.02rem;
+
+	/* background: yellow; */
+	float: left;
+	background: url('../img/gez_03.png')center center no-repeat;
+	background-size: 100%;
+}
+.zhong1{
+	width: 2.86rem;
+	height: 1.02rem;
+	/* background: yellow; */
+	float: left;
+	background: url('../img/lllll_03.png')center center no-repeat;
+	background-size: 100%;
+	margin-left: 1rem;
+}
+.you{
+	width: 1.02rem;
+	height: 1.02rem;
+
+	/* background: yellow; */
+	float: left;
+	background: url('../img/gez_06.png')center center no-repeat;
+	background-size: 100%;
+	margin-left: 0.9rem;
+}
+.zhong{
+	width: 6.87rem;
+	height: 0.06rem;
+	margin: 0 auto;
+	/* background: red; */
+	background: url('../img/gez_10.png')center center no-repeat;
+	background-size: 100%;
+}
+.xia{
+	width: 100%;
+	overflow: hidden;
+	padding: 0.3rem 0.8rem;
+}
+.tou1{
+	width: 1.22rem;
+	height: 1.91rem;
+	float: left;
+	/* margin-left: 0.39rem; */
+	background: url('../img/tx_03.png')center center no-repeat;
+	background-size: 100%;
+}
+.tou2{
+	width: 1.14rem;
+	height: 2.13rem;
+	float: left;
+	margin-left: 0.39rem;
+	background: url('../img/tx_05.png')center center no-repeat;
+	background-size: 100%;
+}
+.tou3{
+	width: 1.26rem;
+	height: 1.91rem;
+	float: left;
+	margin-left: 0.39rem;
+	background: url('../img/tx_07.png')center center no-repeat;
+	background-size: 100%;
+}
+.tou4{
+	width: 1.11rem;
+	height: 1.93rem;
+	float: left;
+	margin-left: 0.39rem;
+	background: url('../img/tx_09.png')center center no-repeat;
+	background-size: 100%;
+}
+.zzkk{
+	width: 100%;
+	height: 2.84rem;
+	margin-top: 0.3rem;
+	position: relative;
+}
+.maik{
+	/* margin-top: 0.3rem; */
+	width: 6.76rem;
+	height: 0.76rem;
+	border: 0.03rem solid #E42C46;
+	border-radius: 0.4rem;
+	margin: 0 auto;
+}
+.zik{
+	margin-top: 0.08rem;
+	width: 1.02rem;
+	height: 0.6rem;
+	border-radius: 0.4rem;
+	font-size: 0.26rem;
+	color: #E42C46;
+	text-align: center;
+	line-height: 0.6rem;
+	float: left;
+	margin-left: 0.2rem;
+}
+.mmm{
+	margin-top: 0.06rem;
+	width: 1.03rem;
+	height: 0.59rem;
+	border-radius: 0.4rem;
+	float: right;
+	margin-right: 0.1rem;
+	background: red;
+	background: url('../img/mai_03.png')center center no-repeat;
+	background-size: 100%;
+}
+.dazi{
+	width: 2.37rem;
+	height: 1.06rem;
+	background: url('../img/zzi_03.png')center center no-repeat;
+	background-size: 100%;
+	position: absolute;
+	left: 0.32rem;
+	bottom: 0.28rem;
+	margin: auto;
+}
+.shuzi{
+	width: 1.24rem;
+	height: 0.6rem;
+	background: url('../img/zzi_06.png')center center no-repeat;
+	background-size: 100%;
+	position: absolute;
+	right: 0.32rem;
+	bottom: 0.28rem;
+	margin: auto;
+}
+.dibu{
+	width: 100%;
+	height: 5.7rem;
+	background: #FCFCFC;
+	position: relative;
+}
+.zimu{
+	width: 0.34rem;
+	height: 5.2rem;
+	border-radius: 0.4rem;
+	background: #EFEFEF;
+	position: absolute;
+	top: 0.35rem;
+	right: 0.18rem;
+	margin: auto;
+}
+.zimu ul li{
+	font-size: 0.2rem;
+	text-align: center;
+}
+.yihang{
+	width: 6.6rem;
+	height: 1.06rem;
+	padding-top: 0.2rem;
+	float: left;
+	margin-left: 0.4rem;
+	/* background: red; */
+}
+.renyi{
+	width: 6.6rem;
+	height: 1.38rem;
+	padding: 0.2rem 0;
+	margin-left: 0.4rem;
+	/* background: yellow; */
+	float: left;
+}
+.renyi .zuo{
+	width: 1.03rem;
+	height: 0.98rem;
+	float: left;
+	
+	background: url('../img/fan_07.png')center center no-repeat;
+	background-size: 100%;
+}
+.renyi .zi{
+	width: 4.2rem;
+	height: 0.98rem;
+	float: left;
+	margin-left: 0.05rem;
+	/* background: yellow; */
+    padding-top: 0.1rem;
+}
+.renyi .zi span{
+	font-size: 0.22rem;
+	color: #000;
+    float: left;
+}
+.renyi .tub{
+	width: 0.33rem;
+	height: 0.51rem;
+	/* background: yellow; */
+	float: left;
+	margin-top: 0.3rem;
+    margin-left: 0.5rem;
+    background: url('../img/fan_13.png')center center no-repeat;
+	background-size: 100%;
+}
+.xianx{
+	width: 6.55rem;
+	height: 0.02rem;
+	background: #E6E6E6;
+	/* margin: 0 auto; */
+	float: left;
+	margin-left: 0.4rem;
+}
+.rener{
+	width: 7rem;
+	height: 1.38rem;
+	padding: 0.2rem 0;
+	margin-left: 0rem;
+	/* background: yellow; */
+	float: left;
+}
+.rener .zi{
+	width: 4.2rem;
+	height: 0.98rem;
+	float: left;
+	margin-left: 0.05rem;
+	/* background: yellow; */
+    padding-top: 0.1rem;
+}
+.rener .zi span{
+	font-size: 0.22rem;
+	color: #000;
+    float: left;
+}
+.rener .tub{
+	width: 0.33rem;
+	height: 0.51rem;
+	/* background: yellow; */
+	float: left;
+	margin-top: 0.3rem;
+    margin-left: 0.5rem;
+    background: url('../img/fan_13.png')center center no-repeat;
+	background-size: 100%;
+}
+.rener .you4{
+	width: 1.5rem;
+	height: 100%;
+	float: left;
+	margin-left: 0.3rem;
+	/* background: yellow; */
+	position: relative;
+}
+.rener .you4 .tkk{
+	width: 1.17rem;
+	height: 0.65rem;
+    position: absolute;
+    left: 0.16rem;
+    top: 0.2rem;
+    margin: auto;
+    background: url('../img/fan_19.png')center center no-repeat;
+	background-size: 100%;
+}
+.renyi .zuo11{
+	width: 1.03rem;
+	height: 0.98rem;
+	float: left;
+	
+	background: url('../img/fan_23.png')center center no-repeat;
+	background-size: 100%;
+}

@@ -1,0 +1,506 @@
+body{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	background: #25252b;
+	font-family: "苹方";
+}
+.headk{
+	width: 100%;
+	height: 2.05rem;
+	background: #25252b;
+	padding-top: 0.1rem;
+	position: relative;
+}
+.head-title{
+	width: 6.81rem;
+	height: 0.56rem;
+	margin: 0 auto;
+	position: relative;
+}
+.head-title-zuo{
+	width: 0.56rem;
+	height: 0.56rem;
+	float: left;
+	background-image: url('../img/zuojiantou.png');
+	background-size: 100%;
+}
+.head-title-zi{
+	font-family: "苹方";
+	font-weight: bold;
+	color: #fff;
+	width: 0.9rem;
+	height: 100%;
+	font-size: 0.3rem;
+	line-height: 0.56rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
+.head-title-you{
+	width: 0.96rem;
+	height: 0.48rem;
+	background: #fff;
+	float: right;
+	border-radius: 0.4rem;
+	margin-top: 0.04rem;
+	position: relative;
+}
+.head-title-you div{
+	width: 0.3rem;
+	height: 0.3rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	background-image: url('../img/w03.png');
+	background-size: cover;
+}
+.daohangk{
+	width: 4.5rem;
+	height: 0.52rem;
+	border-radius: 0.4rem;
+	border: 0.03rem solid #e6e6e6;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0.5rem;
+	margin: auto;
+}
+.daohangk ul{
+	width: 99%;
+	height: 0.4rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+}
+.daohangk ul li{
+	width: 1.2rem;
+	height: 100%;
+	float: left;
+	margin-right: 0.19rem;
+	text-align: center;
+	color: #cccccc;
+	position: relative;
+}
+.dzi-specal img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+.daohangk ul li:nth-child(3){
+	margin-right: 0;
+}
+.dzi-top{
+	width: 100%;
+	 height: 0.24rem; 
+	font-family: "苹方";
+	font-size: 0.22rem;
+	line-height: 0.22rem;
+}
+.dzi-bottom{
+	width: 100%;
+	height: 0.14rem;
+	font-family: "San Francisco Display";
+	font-size: 0.14rem;
+	line-height: 0.14rem;
+	font-weight: 100;
+	/*margin-top: 0.02rem;*/
+}
+/* 内容开始 */
+main{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 2rem;
+	bottom: 0.9rem;
+	margin:auto;
+}
+.neirong-bigk{
+	width: 100%;
+	height: 10.4rem;
+	background: #fff;
+	border-radius: 0.1rem 0.1rem 0 0;
+	margin-top: 0.03rem;
+	padding: 0.22rem 0.24rem;
+}
+.neirong1k{
+	width: 100%;
+	height: 1.7rem;
+	margin: 0.15rem 0;
+}
+.neirong1-left{
+	width: 0.5rem;
+	height: 100%;
+	float: left;
+	margin-right: 0.1rem;
+	position: relative;
+}
+.n-left-yuan{
+	width: 0.3rem;
+	height: 0.3rem;
+	border-radius:50%;
+	border: 0.02rem solid #e6e6e6;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+.n-red-yuan{
+	width: 0.14rem;
+	height: 0.14rem;
+	border-radius:50%;
+	/* border: 0.02rem solid #e6e6e6; */
+	background: red;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+.n-red-yincang{
+	display: none;
+}
+.neirong1-tu img{
+	width: 100%;
+	height: 100%;
+}
+.neirong1-tu{
+	width: 1.88rem;
+	height: 100%;
+	float: left;
+}
+.neirong1-right{
+	width: 4.54rem;
+	height: 100%;
+	float: right;
+	padding-left: 0.05rem;
+}
+.nei1-rtop{
+	width: 100%;
+	height: 0.47rem;
+	padding-left: 0.05rem;
+	position: relative;
+}
+.nei1-r1{
+	width: 3.64rem;
+	height: 0.26rem;
+	font-family: "苹方";
+	font-weight: bold;
+	font-size: 0.24rem;
+	color: #666;
+	margin-top: -0.03rem;
+	padding: 0;
+}
+.nei1-r2{
+	width: 3.64rem;
+	height: 0.18rem;
+	font-family: "San Francisco Display";
+	font-weight: bold;
+	font-size: 0.18rem;
+	color: #b3b3b3;
+	vertical-align: top;
+}
+.nei1-rr{
+	width: 1rem;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: auto;
+	font-family: "MyriadPro";
+	color: red;
+}
+.nei1-rr1{
+	width: 100%;
+	height: 0.26rem;
+	font-size: 0.26rem;
+	margin-top: -0.04rem;
+	text-align: center;
+}
+.nei1-rr2{
+	width: 100%;
+	height: 0.16rem;
+	font-size: 0.18rem;
+	text-align: right;
+}
+.nei1-r3{
+	width: 100%;
+	height: 0.09rem;
+	padding-left: 0.05rem;
+}
+.nei1-r3 ul{
+	width: 100%;
+	height: 100%;
+}
+.nei1-r3 ul li{
+	width: 0.03rem;
+	height: 0.03rem;
+	border-radius: 50%;
+	float: left;
+	margin-right: 0.01rem;
+	background: #e5e5e5;
+	margin-top: 0.05rem;
+}
+.nei1-r3 ul li:nth-child(1){
+	background: #b2b2b2;
+}
+.nei1-r3 ul li:nth-last-child(1){
+	background: #b2b2b2;
+}
+[class*='nei1-r4']{
+	width: 1.12rem;
+	height: 0.21rem;
+}
+.nei1-r41{
+	background-image: url('../img/g06.png');
+	background-size: cover;
+}
+.nei1-r42{
+	background-image: url('../img/g11.png');
+	background-size: cover;
+}
+.nei1-r43{
+	background-image: url('../img/g15.png');
+	background-size: cover;
+}
+
+.nei1-r5{
+	width: 2.5rem;
+	height: 0.4rem;
+	padding-top: 0.1rem;
+	/* padding-right: 0.05rem; */
+	padding-left: 0.05rem;
+}
+.nei1-r5 div{
+	width: 0.75rem;
+	height: 0.3rem;
+	margin-right: 0.1rem;
+	background: url('../img/bg-yuanku.png');
+	background-size: cover;
+	float: left;
+	text-align: center;
+	line-height: 0.3rem;
+	font-size: 0.18rem;
+	color: #999;
+	font-family: "黑体"
+}
+.nei1-r5 div:nth-last-child(1){
+	margin-right: 0;
+}
+.nei1-r6{
+	width: 100%;
+	height: 0.55rem;
+}
+.nei1-r61{
+	width: 0.5rem;
+	height: 100%;
+	line-height: 0.68rem;
+	color: #b3b3b3;
+	font-weight: bold;
+	font-size: 0.18rem;
+	float: left;
+	position: relative;
+}
+.nei1-r62{
+	width: 0.3rem;
+	height: 0.3rem;
+	position: absolute;
+	top: 0.16rem;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+.nei1-r63{
+	width: 0.78rem;
+	height: 100%;
+	float: left;
+	position: relative;
+}
+.nei1-r631{
+	width: 0.71rem;
+	height: 0.3rem;
+	float: left;
+	position: absolute;
+	top: 0.16rem;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+.nei1-r63 p{
+	color: #808080;
+	font-weight: bold;
+	font-size: 0.18rem;
+	text-align: center;
+	line-height: 0.5rem;
+	margin-top: 0.08rem;
+}
+.nei1-r64{
+	width: 0.26rem;
+	height: 0.26rem;
+	position: absolute;
+	top: 0.165rem;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+.nei1-r65{
+	width: 2rem;
+	height: 100%;
+	line-height: 0.8rem;
+	float: left;
+	position: relative;
+	display: inline-block;
+	margin-top: 0.03rem;
+}
+.nei1-r651{
+	width: 0.8rem;
+	height: 100%;
+	display: inline-block;
+	color: #808080;
+	font-weight: bold;
+	font-size: 0.18rem;
+	float: left;
+	line-height: 0.56rem;
+}
+.nei1-r652{
+	width: 1.1rem;
+	height: 100%;
+	display: inline-block;
+	color: #b3b3b3;
+	font-weight: bold;
+	font-size: 0.16rem;
+	float: left;
+	line-height: 0.56rem;
+}
+/* 分割 */
+.fenge{
+	width: 7.02rem;
+	height: 0.04rem;
+	margin: 0 auto;
+	background-image: url('../img/bg-fenge.png');
+	background-size: cover;
+}
+/* 付款内容 */
+.fukuan-bigk{
+	width: 100%;
+	height: 1.94rem;
+}
+.fukuank{
+	width: 2.7rem;
+	height: 100%;
+	float: right;
+	padding: 0.36rem 0;
+}
+.fuku-top{
+	width: 1.89rem;
+	height: 0.2rem;
+	float: right;
+	background-image: url('../img/zhifu.png');
+	background-size: cover;
+}
+.fuku-middle{
+	width: 100%;
+	height: 0.74rem;
+	float: right;
+	position: relative;
+}
+.fuku-middle p{
+	display: inline-block;
+	color: red;
+}
+.fm1{
+	width: 0.56rem;
+	font-size: 0.24rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+}
+.fm2{
+	width: 2.1rem;
+	font-size: 0.6rem;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	font-weight: bold;
+}
+.fuku-bottom{
+	width: auto;
+	height: 0.2rem;
+	float: right;
+	/* overflow: hidden; */
+}
+.fuku-bottom p{
+	display: inline-block;
+	float: left;
+	text-align: center;
+	font-size: 0.22rem;
+	line-height: 0.2rem;
+	color: red;
+}
+.fuku-bottom p:nth-child(3){
+	color: #b2b2b2;
+	font-weight: bold;
+}
+.fuku-bottom p:nth-child(4){
+	color: #b2b2b2;
+}
+/* 底部开始 */
+.dibu-bigk{
+	width: 100%;
+	height: 0.9rem;
+	background: red;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+.dibu-zik{
+	width: 1.42rem;
+	height: 0.6rem;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.dibu-tu{
+	width: 0.36rem;
+	height: 0.3rem;
+	margin-top: 0.15rem;
+	float: left;
+}
+.dibu-zi{
+	width: 0.98rem;
+	height: 100%;
+	float: right;
+	color: #fff;
+	text-align: center;
+}
+.dibu-zi p{
+	width: 100%;
+	font-size: 0.3rem;
+}
+.dibu-zi p:nth-child(2){
+	font-size: 0.18rem;
+	font-family: "San Francisco Display";
+}

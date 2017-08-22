@@ -1,0 +1,317 @@
+body{
+	font-family: "苹方";
+}
+.big-fg{
+	width: 100%;
+	height: 0.04rem;
+	background-image: url('../img/person/pr-bigfg.png');
+	background-size: cover;
+}
+.banner-bigk{
+	width: 100%;
+	height: 4.12rem;
+	background-image: url('../img/order/order-banner.png');
+	background-size: cover;
+	position: relative;
+	z-index: 0;
+}
+.banner-bigk:after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity:0.15; 
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: -1;
+}
+.head-titlek{
+	width: 100%;
+	height: 0.9rem;
+}
+.head-titlek-left{
+	width: 1.28rem;
+	height: 0.9rem;
+	float: left;
+	position: relative;
+}
+.head-titlek-left img{
+	width: 0.54rem;
+	height: 0.54rem;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+
+}
+.head-title-zi{
+	width: 1.56rem;
+	height: 100%;
+	margin:  0 auto;
+	text-align: center;
+	line-height: 0.9rem;
+	font-size: 0.3rem;
+	color: #fff;
+	font-weight: bold;
+}
+.order-bigk{
+	width: 6.80rem;
+	height: 5.80rem;
+	position: absolute;
+	top: 1.13rem;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background-image: url('../img/order/order-bg.png');
+	background-size: cover;
+}
+.order-zi{
+	width: 4.87rem;
+	height: 1.35rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 2.49rem;
+	margin:  auto;
+	padding-top: 0.06rem;
+}
+.oz1{
+	display: inline-block;
+	width: 100%;
+	height: 0.32rem;
+	line-height: 0.3rem;
+	text-align: center;
+	font-size: 0.28rem;
+	font-weight: bold;
+	color: #807e7e;
+	float: left;
+}
+.oz1-1{
+	color: #f27138;
+}
+.oz1-2{
+	color: #ed3d2c;
+}
+.oz2{
+	display: inline-block;
+	width: 0.58rem;
+	height: 0.03rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0.735rem;
+	margin: auto;
+	background-image: url('../img/order/order-fg.png');
+	background-size: cover;
+}
+.oz3{
+	display: inline-block;
+	width: 100%;
+	height: 0.24rem;
+	text-align: center;
+	font-size: 0.22rem;
+	color: #999797;
+	float: left;
+	margin-top: 0.1rem;
+}
+.oz3 span{
+	color: #01aaef;
+}
+.anniu{
+	width: 4.74rem;
+	height: 0.52rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0.9rem;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+.anniu input{
+	width: 2.16rem;
+	height: 100%;
+	border-radius: 0.4rem;
+	background-image: url('../img/order/order-bg3.png');
+	background-size: cover;
+	color: #fff;
+}
+/* 正文开始 */
+.zhengwen-k{
+	width: 100%;
+	height: 8.4rem;
+	background: #f2f2f2;
+	position: relative;
+	z-index: -1;
+}
+.kkk{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 3.5rem;
+	margin: auto;
+}
+.touxiang-xia{
+	width: 3rem;
+	height: 0.5rem;
+	margin: 0 auto;
+	position: relative;
+}
+.tx-left{
+	width: 0.18rem;
+	height: 100%;
+	float: left;
+	position: relative;
+}
+.tx-left p:nth-child(1){
+	width: 0.06rem;
+	height: 0.06rem;
+	border-radius: 50%;
+	background: #fab537;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+.tx-left p:nth-child(2){
+	width: 0.08rem;
+	height: 0.08rem;
+	border-radius: 50%;
+	background: #1de3b9;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	/* margin-top: 0.28rem; */
+}
+.tx-middle{
+	width: auto;
+	height: 100%;
+	font-size: 0.3rem;
+	color: #eb7737;
+	text-align: center;
+	line-height: 0.5rem;
+	float: left;
+	font-weight: bold;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.tx-right{
+	width: 0.18rem;
+	height: 100%;
+	float: right;
+	position: relative;
+}
+.tx-right p:nth-child(1){
+	width: 0.08rem;
+	height: 0.08rem;
+	border-radius: 50%;
+	background: #1de3b9;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: : 0;
+	margin: auto;
+	/* margin-top: 0.28rem; */
+}
+.tx-right p:nth-child(2){
+	width: 0.06rem;
+	height: 0.06rem;
+	border-radius: 50%;
+	background: #fab537;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
+.text-yinwen{
+	width: auto;
+	height: 0.31rem;
+	text-align: center;
+	line-height: 0.31rem;
+	font-family: "San Francisco Display";
+	font-size: 0.22rem;
+	color: #ccc;
+	/* margin-top: -0.1rem; */
+}
+.changfg{
+	width: 0.97rem;
+	height: 0.04rem;
+	margin:  0 auto;
+	background-image: url('../img/order/order11.png');
+	background-size: cover;
+	margin-top: 0.02rem;
+}
+/* 底部开始 */
+.dibu-bigk{
+	width: 100%;
+	height: 0.9rem;
+	background-image: url('../img/card/dibu.png');
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+.dibu-zik{
+	width: 1.9rem;
+	height: 0.6rem;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.dibu-tu{
+	width: 0.36rem;
+	height: 0.3rem;
+	margin-top: 0.15rem;
+	float: left;
+}
+.dibu-zi{
+	width: auto;
+	height: 100%;
+	float: right;
+	color: #fff;
+	text-align: center;
+	overflow: hidden;
+}
+.dibu-zi p{
+	width: 100%;
+	font-size: 0.3rem;
+}
+.dibu-zi .di-yingwen{
+	font-size: 0.18rem;
+	/*margin-top: -0.1rem;*/
+	font-family: "San Francisco Display";
+	/*letter-spacing: -0.02rem;*/
+}
+.zhenwen-ktu{
+	width: 3.34rem;
+	height: 2.38rem;
+	position: absolute;
+	bottom: 1rem;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 10;
+	background-image: url('../img/order/order-bg2.png');
+	background-size: cover;
+}

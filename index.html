@@ -1,450 +1,398 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/12scss.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/person.css">
-    <link rel="stylesheet" href="css/new.css">
-    <link rel="stylesheet" href="css/animate.css">
-
-    <!--进度条css-->
-    <link rel="stylesheet" href="css/tiao.css">
-
-    <script src="js/jQuery.js"></script>
-    <link rel="stylesheet" href="css/jquery.fullPage.css">
-    <script src="js/jquery.fullPage.js"></script>
-
-    <!--作品轮播css/js-->
-    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
-    <script src="js/swiper-3.4.2.min.js"></script>
-    <link rel="stylesheet" href="css/imageflow.css">
-    <script src="js/imageflow.js"></script>
-
-    <script>
-        $(function () {
-            $('#fullpage').fullpage({
-                'verticalCentered': false,
-                'css3': true,
-                anchors: ['p1', 'p2', 'p3', 'p4', 'p5'],
-                'navigation': true,
-                'navigationPosition': 'right',
-                'navigationTooltips': ['home', 'introduction', 'skills', 'portfolto', 'contact'],
-                fixedElements: "#menu",
-                menu: "#menu",
-                afterLoad: function (aLink, index) {
-                    if (index == 1) {
-                        $("#menu").hide(500);
-                    } else {
-                        $("#menu").show(500);
-                    }
-//                    if(index==3){
-//                        $(".expand").eq(0).addClass(photoshop);
-//                        $(".expand").eq(1).addClass(html5);
-//                        $(".expand").eq(2).addClass(css3);
-//                        $(".expand").eq(3).addClass(javascript);
-//                        $(".expand").eq(4).addClass(jquery);
-//                    }
-                },
-                onLeave:function (index) {
-
-                }
-
-            });
-
-            //topbar内容
-            $("#menu li").prepend("<span></span>"); //Throws an empty span tag right before the a tag
-            $("#menu li").each(function () { //For each list item...
-                var linkText = $(this).find("a").html(); //Find the text inside of the a tag
-                $(this).find("span").show().html(linkText); //Add the text in the span tag
-            });
-            $("#menu li").hover(function () {	//On hover...
-                $(this).find("span").stop().animate({
-                    marginTop: "-40" //Find the span tag and move it up 40 pixels
-                }, 250);
-            }, function () { //On hover out...
-                $(this).find("span").stop().animate({
-                    marginTop: "0" //Move the span back to its original state (0px)
-                }, 250);
-            });
-
-
-
-
-            });
-    </script>
+<title>个人主页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Curriculum vitae Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="applisalonion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />	
+<link rel="stylesheet" href="css/swipebox.css">
+<link href="css/font-awesome.min.css" rel='stylesheet' type='text/css' />	
+<!--//Custom Theme files-->
+<!--web-font-->
+	<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Merriweather+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<!--//web-font-->
+<script src="js/jquery.min.js"></script>
 </head>
 <body>
-<div id="menu">
-    <ul>
-        <li><a href="#p1">HOME</a></li>
-        <li><a href="#p2">INTRODUCTION</a></li>
-        <li><a href="#p3">SKILLS</a></li>
-        <li><a href="#p4">PORTFOLIO</a></li>
-        <li><a href="#p5">CONTACT</a></li>
-    </ul>
-    <div class="cls"></div>
+<!--banner-->
+<div class="banner">
+	<div class="container">
+		<div class="col-md-3 b-part1">
+			<img src="img/me.jpg" alt=" " />
+			<h1>杨锦瑞</h1>
+			<h2>Web Designer</h2>
+		</div>
+		<div class="col-md-3 b-part2">
+			<h3>Contact</h3>
+			<h4><a href="mailto:info@example.com">18335132251@163.com</a></h4>
+			<h4 class="agile">17816135746</h4>
+			<h4>杭州</h4>
+		</div>
+		<div class="col-md-3 b-part3">
+			<h3>Follow</h3>
+			<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-tumblr" aria-hidden="true"></i></a>
+		
+		</div>
+		<div class="col-md-3 b-part4">
+			<h3>Motto</h3>
+			<i class="fa fa-behance" aria-hidden="true"></i>
+			<h4>8小时内求生存/8小时外求发展</h4>
+		</div>
+		<div class="clearfix"></div>
+	</div>
 </div>
-<div id="fullpage">
-    <!--首页-->
-    <div class="section">
-        <div class="beijingtu1">
-            <div class="container">
-                <div class="row hang1">
-                    <div class="banner-left col-lg-6 col-sm-6 col-xs-12">
-                        <div class="welcome">
-                            <h3 class="welcome-zi">WELCOME</h3>
-                        </div>
-                        <div class="bleft-xia " id="headernav">
-                            <div class="juxing1">
-                                <a href="#p1"><h3>Home</h3></a>
-                            </div>
-                            <div class="juxing2">
-                                <a href="#p2"><h3>About</h3></a>
-                            </div>
-                            <div class="juxing3">
-                                <a href="#p3"><h3>Skill</h3></a>
-                            </div>
-                            <div class="juxing4">
-                                <a href="#p4"><h3>Production</h3></a>
-                            </div>
-                            <div class="juxing5">
-                                <a href="#p5"><h3>Contact</h3></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="banner-right col-lg-6 col-sm-6 ">
-                        <img src="img/banner-tou.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--自我介绍-->
-    <div class="section beijingtu5">
-        <div class="container">
-            <div class="row hang2">
-                <div class="about-left col-lg-4 col-sm-4 col-xs-12">
-                    <div class="about-zik">
-                        <h2>WHAT TO KNOW ABOUT ME ?</h2>
-                    </div>
-                    <div class="about-fg"></div>
-                    <div class="about-tu">
-                        <div class="atu1">
-                            <img src="img/facebook.png" alt="">
-                        </div>
-                        <div class="atu1">
-                            <img src="img/google-plus.png" alt="">
-                        </div>
-                        <div class="atu1">
-                            <img src="img/twitter.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="about-right col-lg-8 col-sm-8 col-xs-12">
-                    <h3>INTRODUCTION</h3>
-                    <div>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMy name is Yang Jinrui, a simple and honest, have a positive
-                        attitude, hard work. The character is calm and restrained, work carefully and steadfast, personality
-                        tough,
-                        can bear hardships and stand hard work, have a strong sense of responsibility! Have a strong
-                        entrepreneurial
-                        spirit and team spirit, learning ability, adaptability, ability to work under pressure, self
-                        challenge.
-                    </div>
-                </div>
-            </div>
-            <div class="row hang6">
-                <div class=" icon-infomation col-xs-6 col-sm-3 col-lg-3">
-                    <img src="img/geren.jpg" alt="">
-                    <h4>基本信息</h4>
-                    <p>
-                        <br>
-                        年龄: 21岁 籍贯：山西
-                    </p>
-                </div>
-                <div class=" icon-infomation col-xs-6 col-sm-3 col-lg-3">
-                    <img src="img/hat.png" alt="">
-                    <h4>毕业院校</h4>
-                    <p>
-                        <br>
-                        山西省财政税务专科学校
-                    </p>
+<!--//banner-->
 
-                </div>
-                <div class=" icon-infomation col-xs-6 col-sm-3 col-lg-3">
-                    <img src="img/book.png" alt="">
-                    <h4>学历和专业</h4>
-                    <p>
-                        大专
-                        <br>
-                        专业技能 编程
-                    </p>
-                </div>
-                <div class=" icon-infomation col-xs-6 col-sm-3 col-lg-3">
-                    <img src="img/tel.png" alt="">
-                    <h4>联系方式</h4>
-                    <p>
-                        邮箱 chenjichuan521@sina.cn
-                        <br>
-                        电话18610982803
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!--技能-->
-    <div class="section ">
-        <div class="beijingtu2">
-            <div class="zhezhao2">
-                <div class="container skill-main">
-                    <h3 class="skillh3">SKILLS</h3>
-                    <div class="row hang3">
-                        <div class="skill-left col-lg-8 col-sm-8 col-xs-12">
-                            <div class="skill-content">
-                                <div class="col">
-                                    <ul id="skill">
-                                        <li><span class="expand photoshop"></span><em>Photoshop &nbsp&nbsp90%</em></li>
-                                        <li><span class="expand html5"></span><em>HTML 5 &nbsp&nbsp70%</em></li>
-                                        <li><span class="expand css3"></span><em>CSS 3 &nbsp&nbsp90%</em></li>
-                                        <li><span class="expand javascript"></span><em>Javascript &nbsp&nbsp89%</em>
-                                        </li>
-                                        <li><span class="expand jquery"></span><em>jQuery &nbsp&nbsp85%</em></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-right col-lg-4 col-sm-4 col-xs-12">
-                            <h2>This is my professional skills chart</h2>
-                            <div>
-                                PS and AI software to use relatively skilled, H5 production is also good, but also do a
-                                lot
-                                of Web
-                                site projects. For JS, is still learning
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--作品-->
-    <div class="section beijingtu4">
-        <div class="slide">
-            <div class="hang4 row">
-                <h3 class="work-title">PORTFOLIO(PS&H5)</h3>
-
-                <div class="work-small">
-                    <ul>
-                        <li><a href="image/maikefeng.jpg">one</a></li>
-                        <li><a href="image/APP.jpg">two</a></li>
-                        <li><a href="image/ping.jpg">three</a></li>
-                        <li><a href="image/yidongduan.jpg">four</a></li>
-                        <li><a href="img/ps5.jpg">five</a></li>
-                        <li><a href="img/ps1.jpg">six</a></li>
-                        <li><a href="tianmaophone/首页/yidongduan.html">seven</a></li>
-                        <li><a href="unk/首页/shouye.html">eight</a></li>
-                    </ul>
-                </div>
-
-
-                <div class="work-tu col-lg-3 col-sm-3 col-xs-12">
-                    <a href="image/maikefeng.jpg">
-                        <img src="img/ps2.jpg" alt="">
-                    </a>
-                    <div class="worktu-zhe"></div>
-                </div>
-                <div class="work-tu col-lg-3 col-sm-3 col-xs-12">
-                    <a href="image/APP.jpg">
-                        <img src="img/wangye1.jpg" alt="">
-                    </a>
-                    <div class="worktu-zhe"></div>
-                </div>
-                <div class="work-tu col-lg-3 col-sm-3 col-xs-12">
-                    <a href="image/ping.jpg">
-                        <img src="img/ps3.jpg" alt="">
-                    </a>
-                    <div class="worktu-zhe"></div>
-                </div>
-                <div class="work-tu col-lg-3 col-sm-3 col-xs-12">
-                    <a href="image/yidongduan.jpg">
-                        <img src="img/wangy2.jpg" alt="">
-                    </a>
-                    <div class="worktu-zhe"></div>
-                </div>
-
-                <div class="work-tu col-lg-3 col-sm-3 col-xs-12">
-                    <a href="img/ps5.jpg">
-                        <img src="img/ps5.jpg" alt="">
-                    </a>
-                    <div class="worktu-zhe"></div>
-                </div>
-                <div class="work-tu col-lg-3 col-sm-3 col-xs-12">
-                    <a href="img/ps1.jpg">
-                        <img src="img/ps1.jpg" alt="">
-                    </a>
-                    <div class="worktu-zhe"></div>
-                </div>
-                <div class="work-tu col-lg-3 col-sm-3 col-xs-12">
-                    <a href="tianmaophone/首页/yidongduan.html">
-                        <img src="img/h54.jpg" alt="">
-                    </a>
-                    <div class="worktu-zhe"></div>
-
-                </div>
-                <div class="work-tu col-lg-3 col-sm-3 col-xs-12">
-                    <a href="unk/首页/shouye.html">
-                        <img src="img/h52.jpg" alt="">
-                    </a>
-                    <div class="worktu-zhe"></div>
-                </div>
-
-            </div>
-        </div>
-        <div class="slide">
-            <div class="hang4 row">
-                <h3 class="work-title">PORTFOLIO(other)</h3>
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background-image:url('img/todu.jpg')">
-                            <a href="wenjian/markdown.html" target="view_window"></a>
-                        </div>
-                        <div class="swiper-slide" style="background-image:url('img/huitu.jpg')">
-                            <a href="wenjian/canvas.html" target="view_window"></a>
-                        </div>
-                        <div class="swiper-slide" style="background-image:url('img/saolei.jpg')">
-                            <a href="wenjian/saoleigame.html" target="view_window"></a>
-                        </div>
-                        <div class="swiper-slide" style="background-image:url('img/dazi.jpg')">
-                            <a href="wenjian/dazigame.html" target="view_window"></a>
-                        </div>
-
-                        <div class="swiper-slide" style="background-image:url('img/fanke1.jpg')">
-                            <a href="fanke/fanke.html" target="view_window"></a>
-                        </div>
-                        <div class="swiper-slide" style="background-image:url('img/xiaomi1.jpg')">
-                            <a href="xiaomi/ricexiugai.html" target="view_window"></a>
-                        </div>
-                        <div class="swiper-slide" style="background-image:url('img/yidong1.jpg')">
-                            <a href="yidong/index.html" target="view_window"></a>
-                        </div>
-                        <div class="swiper-slide" style="background-image:url('img/pingguo1.jpg')">
-                            <a href="pingguo/pingguo.html" target="view_window"></a>
-                        </div>
-                        <div class="swiper-slide" style="background-image:url('img/jingdong1.jpg')">
-                            <a href="jingdong/index.html" target="view_window"></a>
-                        </div>
-                        <div class="swiper-slide" style="background-image:url('img/sofa.png')">
-                            <a href="sofa/index.html" target="view_window"></a>
-                        </div>
-                        <div class="swiper-slide" style="background-image:url('img/weierjia.png')">
-                            <a href="qiyezzhan/html/index.html" target="view_window"></a>
-                        </div>
-                        <div class="swiper-slide" style="background-image:url('img/tianmao1.jpg')">
-                            <a href="tianmao/tianmao.html" target="view_window"></a>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-
-            </div>
-        </div>
-        <!--第三屏-->
-        <div class="slide">
-            <div class="hang4 row">
-                <h3 class="work-title">PORTFOLIO(JS/jQuery)</h3>
-                <div id="starsIF" class="imageflow">
-                    <!--<a href="fanke/fanke.html"><img src="img/fanke1.jpg" longdesc="#" width="280" height="300" alt="Picture" /></a>-->
-                    <!--<a href="xiaomi/ricexiugai.html"><img src="img/xiaomi1.jpg" longdesc="#" width="280" height="300" alt="Picture" /></a>-->
-                    <!--<a href="yidong/index.html"><img src="img/yidong1.jpg" longdesc="#" width="280" height="300" alt="Picture" /></a>-->
-                    <!--<a href="pingguo/pingguo.html"><img src="img/pingguo1.jpg" longdesc="#" width="280" height="300" alt="Picture" /></a>-->
-                    <!--<a href="jingdong/index.html"><img src="img/jingdong1.jpg" longdesc="#" width="280" height="300" alt="Picture" /></a>-->
-                    <!--<a href="sofa/index.html"><img src="img/sofa.png" longdesc="#" width="280" height="300" alt="Picture" /></a>-->
-                    <!--<a href="qiyezzhan/html/index.html"><img src="img/weierjia.png" longdesc="#" width="280" height="300" alt="Picture" /></a>-->
-
-                    <img src="img/fanke1.jpg" longdesc="#" width="280" height="300" alt="Picture"/>
-                    <img src="img/xiaomi1.jpg" longdesc="#" width="280" height="300" alt="Picture" />
-                    <img src="img/yidong1.jpg" longdesc="#" width="280" height="300" alt="Picture" />
-                    <img src="img/pingguo1.jpg" longdesc="#" width="280" height="300" alt="Picture" />
-                    <img src="img/jingdong1.jpg" longdesc="#" width="280" height="300" alt="Picture" />
-                    <img src="img/sofa.png" longdesc="#" width="280" height="300" alt="Picture" />
-                    <img src="img/weierjia.png" longdesc="#" width="280" height="300" alt="Picture" />
-                    <div class="zhezhao-image"></div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- 联系开始 -->
-    <div class="section beijingtu3">
-        <div class="zhezhao3">
-            <div class="hang5 row">
-                <h3 class="contact-title">CONTACT</h3>
-                <div class="contact-left col-lg-5 col-sm-5 col-xs-12">
-                    <div class="say">
-                        Say hi to me
-                    </div>
-                    <div class="line1"></div>
-                    <div class="address">
-                        No. 25 South Peak Road <br>
-                        Wanbailin District <br>
-                        Taiyuan, Shanxi
-                    </div>
-                    <div class="address">
-                        TEL: <br>
-                        18834567893
-                    </div>
-                    <div class="address">
-                        EMAL: <br>
-                        2430960358@qq.com
-                    </div>
-                </div>
-                <div class="contact-right col-lg-7 col-sm-7 col-xs-12">
-                    <div class="say">
-                        Drop me a line
-                    </div>
-                    <div class="line2"></div>
-                    <div class="biaodan">
-                        <input type="text" class="name" placeholder="NAME">
-                        <input type="text" class="emal" placeholder="EMAL">
-                        <textarea name="" id="" cols="30" rows="10" class="liuyan" placeholder="MESSAGE"></textarea>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--about-->
+<div class="about">
+	<div class="container">
+		<h3>About Me</h3>
+		<label class="line"></label>
+		<img src="img/me1.jpg" alt=" " />
+		<p>‘在其位谋其政任其职尽其责’是我秉承的工作态度。爱好爬山，久久之养成了做一件事情脚踏实地，坚持不懈的习惯，这些习惯成为我很好完成项目的助力。为人低调，性格内敛，像代码一样，低调的跃动在键盘上，通过量的积累，克服困难，达到质的变化，完成各种项目需求。</p>
+		<p>静若处子，动若脱兔。</p>
+	</div>
 </div>
+<!--//about-->
+
+
+<!--skills-->
+<div class="skills">
+	<div class="container">
+		<h3>My Skills</h3>
+		<label class="line"></label>
+			<div class="col-md-6 skills-left">
+				<h4>前端“攻城狮”</h4>
+				<p>掌握的技术不止于前端，不断的充实自己，不被互联网潮流淹没</p>
+				<p>ps、html/html5、css/css3、javascript、jquery、angular、vue、nodejs、php、ajax、mvc架构</p> 	
+			</div>
+			<div class="col-md-6 skills-right">
+				<div class="bar_group">
+					<div class='bar_group__bar thin' label='HTML' show_values='true' tooltip='true' value='500'></div>
+					<div class='bar_group__bar thin' label='PHP' show_values='true' tooltip='true' value='380'></div>
+					<div class='bar_group__bar thin' label='JavaScript' show_values='true' tooltip='true' value='460'></div>
+					<div class='bar_group__bar thin' label='angular' show_values='true' tooltip='true' value='360'></div>
+				</div>
+				<script src="js/bars.js"></script>
+			</div>
+			<div class="clearfix"></div>
+			
+	</div>
+</div>
+<!--/skills-->
+
+<!-- download-->
+<!-- <div class="download">
+	<h3>Download my resume here</h3>
+	<a href="#">Download</a>
+</div> -->
+<!-- //download -->
+
+<!-- projects -->
+<!-- <div class="projects">
+	<div class="container">
+		<div class="project-grids">
+			<div class="cycle">
+				<span> </span>
+			</div>
+			<div class="project-grid total-project">
+				<p>79</p>
+				<p>Projects</p>
+				<span> <i class="p-icon"> </i></span>
+			</div>
+			<div class="project-grid clientsgrid">
+				<div>
+					<p>25</p>
+					<p>Clients</p>
+				</div>
+				<span> <i class="p-icon"> </i></span>
+			</div>
+			<div class="project-grid people-grid">
+				<div>
+					<p>100%</p>
+					<p>Satisfaction</p>
+				</div>
+				<span> <i class="p-icon"> </i></span>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div> -->
+<!-- //projects -->
+		
+		
+<!--portfolio-->
+<div id="portfolio" class="portfolio">
+		<div class="container">
+			<h3>My Portfolio</h3>
+			<label class="line"></label>
+			<div class="sap_tabs">			
+				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+					<ul class="resp-tabs-list wow fadeInUp animated" data-wow-delay=".7s">
+						<li class="resp-tab-item"><span>All</span></li>
+						<li class="resp-tab-item"><span>Js</span></li>				
+					</ul>	
+					<div class="clearfix"> </div>	
+					<div class="resp-tabs-container">
+						<div class="tab-1 resp-tab-content">
+							<div class="tab_img">
+								<div class="col-md-4 portfolio-grids grid first">
+									<div class="effect1 wow fadeInUp animated" data-wow-delay=".5s">
+										<a href="img/hungry.jpg" class="swipebox" title="">
+											<img src="img/hungry.jpg" alt="" class="img-responsive" />
+											<div class="figcaption">
+												<p><a href="http://nahungry.duapp.com/" target="black">Hunger餐饮网站（响应式）</a></p>
+											</div>
+										</a>	
+									</div>
+								</div>
+								<div class="col-md-4 portfolio-grids grid">
+									<div class="effect1 wow fadeInUp animated" data-wow-delay=".7s">
+										<a href="img/shop.jpg" class="swipebox" title="" >
+											<img src="img/shop.jpg" alt="" class="img-responsive" />
+											<div class="figcaption">
+												<p><a href="high/index.html" target="black">High购 购物类APP </a></p>
+											</div>
+										</a>	
+									</div>
+								</div>
+								<div class="col-md-4 portfolio-grids grid">
+									<div class="effect1 wow fadeInUp animated" data-wow-delay=".9s">
+										<a href="http://dfwork.duapp.com/" class="swipebox" title="">
+											<img src="img/work.jpg" alt="" class="img-responsive" />
+											<div class="figcaption">
+												<p><a href="http://dfwork.duapp.com/" target="black">易Work 办公APP</a></p>
+											</div>
+										</a>	
+									</div>
+								</div>
+								<div class="col-md-4 portfolio-grids grid grid-mdl">
+									<div class="effect1 wow fadeInUp animated" data-wow-delay=".9s">
+										<a href="img/new.jpg" class="swipebox" title="">
+											<img src="img/new.jpg" alt="" class="img-responsive" />
+											<div class="figcaption">
+												<p><a href="http://newsyjr.duapp.com/pc/web/index.php" target="black">新闻网站</a></p>
+											</div>
+										</a>	
+									</div>
+								</div>
+								<div class="col-md-4 portfolio-grids grid grid-mdl">
+									<div class="effect1 wow fadeInUp animated" data-wow-delay=".9s">
+										<a href="img/new2.jpg" class="swipebox" title="">
+											<img src="img/new2.jpg" alt="" class="img-responsive" />
+											<div class="figcaption">
+												<p><a href="http://newsyjr.duapp.com/app/web/index.php" target="black">新闻网站APP端</a></p>
+											</div>
+										</a>	
+									</div>
+								</div>
+								<div class="col-md-4 portfolio-grids grid grid-mdl">
+									<div class="effect1 wow fadeInUp animated" data-wow-delay=".9s">
+										<a href="img/travel.jpg" class="swipebox" title="">
+											<img src="img/travel.jpg" alt="" class="img-responsive" />
+											<div class="figcaption">
+												<p><a href="http://travel.duapp.com" target="black">穷游APP</a></p>
+											</div> 
+										</a>	
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="tab-1 resp-tab-content">
+							<div class="tab_img">
+								<div class="col-md-4 portfolio-grids grid">
+									<div class="effect1">
+										<a href="images/g1.jpg" class="swipebox" title="">
+											<img src="img/todo.png" alt="" class="img-responsive" />
+											<div class="figcaption">
+												<p><a href="https://htmlpreview.github.io/?https://github.com/ShenJingBingA/cllmemo/blob/master/cll-memo/memo.html" target="black">待办事项</a></p>
+											</div>
+										</a>	
+									</div>
+								</div>
+								<div class="col-md-4 portfolio-grids grid">
+									<div class="effect1">
+										<a href="images/g4.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">
+											<img src="img/canvas.jpg" alt="" class="img-responsive" />
+											<div class="figcaption">
+												<p><a href="https://htmlpreview.github.io/?https://github.com/ShenJingBingA/canvas/blob/master/canvas.html" target="black">画板</a></p>
+											</div>
+										</a>	
+									</div>
+								</div>
+								<div class="col-md-4 portfolio-grids grid">
+									<div class="effect1">
+										<a href="images/g5.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">
+											<img src="img/zi.jpg" alt="" class="img-responsive" />
+											<div class="figcaption">
+												<p><a href="game/game.html" target="black">打字游戏</a></p>
+											</div>
+										</a>	
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--ResponsiveTabs-->
+			<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+			<script type="text/javascript">
+				$(document).ready(function () {
+					$('#horizontalTab').easyResponsiveTabs({
+						type: 'default', //Types: default, vertical, accordion           
+						width: 'auto', //auto or any width like 600px
+						fit: true   // 100% fit in a container
+					});
+				});		
+			</script>
+			<!--//ResponsiveTabs-->
+			<!-- swipe box js -->
+			<script src="js/jquery.swipebox.min.js"></script> 
+				<script type="text/javascript">
+					jQuery(function($) {
+						$(".swipebox").swipebox();
+					});
+			</script>
+			<!-- //swipe box js -->
+		</div>
+	</div>
+<!--//portfolio-->
+
+
+<!-- blog -->
+	<!-- <div class="blog">
+		<div class="container">
+			<h3>Seminars</h3>
+			<label class="line"></label>
+			<div class="blog-grids">
+				<div class="col-md-6 blog-left">
+					<div class="col-md-3 agile1">
+						<h5>25</h5>
+						<h6>March-2016</h6>
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+						<a href="#"><h6 class="spcl">Comments-7</h6></a>
+						<i class="fa fa-eye" aria-hidden="true"></i>
+						<a href="#"><h6 class="spcl">Views-28</h6></a>
+					</div>
+					<div class="col-md-9 agile2">
+						<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/b1.jpg" alt="" /></a>
+						<a href="#" data-toggle="modal" data-target="#myModal"><h4>Contrary to popular belief</h4></a>
+						<p>It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="col-md-6 blog-right">
+					<div class="col-md-3 agile1">
+						<h5>10</h5>
+						<h6>Feb-2016</h6>
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+						<a href="#"><h6 class="spcl">Comments-8</h6></a>
+						<i class="fa fa-eye" aria-hidden="true"></i>
+						<a href="#"><h6 class="spcl">Views-48</h6></A>
+					</div>
+					<div class="col-md-9 agile2">
+						<a href="#" data-toggle="modal" data-target="#myModal2"><img src="images/b2.jpg" alt="" /></a>
+						<a href="#" data-toggle="modal" data-target="#myModal2"><h4>The standard chunk</h4></a>
+						<p>It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor</p>
+					</div>
+					<div class="clearfix"></div>				
+				</div>
+				<div  class="clearfix"></div>
+			</div>
+		</div>
+	</div> -->
+<!-- //blog -->
+<!--  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				 <button type="button" class="close" data-dismiss="modal">&times;</button>
+				 <h4 class="modal-title">Contrary to popular belief</h4>
+			</div>
+			<div class="modal-body">
+					<img src="images/b1.jpg "alt=" " />
+				  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release.</p>
+			</div>
+			<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			 </div>
+ 
+		</div>
+	</div> 
+</div> -->
+<!--      
+ <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				 <button type="button" class="close" data-dismiss="modal">&times;</button>
+				 <h4 class="modal-title">The standard chunk</h4>
+			</div>
+			<div class="modal-body">
+					<img src="images/b2.jpg "alt=" " />
+				  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release.</p>
+			</div>
+			<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			 </div>
+ 
+		</div>
+	</div> 
+</div> -->
+<!--contact-->
+<div class="contact">
+	<div class="container">
+		<h3>Contact</h3>
+		<label class="line"></label>
+		<div class="col-md-4 c-w3l">
+			<i class="fa fa-map-marker" aria-hidden="true"></i>
+			<!-- <h4>house no:132/8a</h4> -->
+			<h4>杭州</h4>
+		</div>
+		<div class="col-md-4 c-w3l c-mail">
+			<i class="fa fa-envelope" aria-hidden="true"></i>
+			<h4><a href="mailto:info@example.com">18335132251@163.com</a></h4>
+			<!-- <h4><a href="mailto:info@example.com">exam2@yahoo.com</a></h4> -->
+		</div>
+		<div class="col-md-4 c-w3l c-phn">
+			<i class="fa fa-phone" aria-hidden="true"></i>
+			<h4>+17816135746</h4>
+			<h4>+18335132251</h4>
+		</div>
+		<div class="clearfix"></div>
+		<form action="#" method="post">
+			<input type="text" name="name" class="name" placeholder="Your Name" required="">
+			<input type="text" name="email" class="email" placeholder="Your Email" required="">
+			<textarea  name="your message" placeholder="Your Message"  required=""></textarea>
+			<input type="submit" value="Send Message">
+		</form>
+	</div>
+</div>
+<!--//contact-->
+
+
+<!--footer-->
+<!-- <div class="footer-agileinfo">
+	<p> &copy; 2016 Curriculum vitae. All Rights Reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+</div> -->
+<!--//footer-->
+<!--common js-->
+
+<script src="js/bootstrap.min.js"></script>
+<!--//common js-->
 </body>
-<script>
-    //作品轮播栏
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflow: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true
-        }
-    });
-
-
-
-//    轮播图片
-    $("#starsIF img").each(function (i,v) {
-       if(i==0){
-           $(this).click(function () {
-               console.log(v)
-           })
-       }
-    });
-
-
-</script>
 </html>

@@ -1,0 +1,294 @@
+/* top */
+body{
+	background: #f8f8f8;
+}
+header{
+	width: 100%;
+	height: 1.03rem;
+	background: #e5392c;
+} 
+header .left{
+	width: 0.58rem;
+	height: 0.58rem;
+	background:url('../img/syjicon.png') center center no-repeat;
+	background-size: 100%;
+	margin-top: 0.2rem;
+	margin-left: 0.5rem;
+	float: left;
+}
+
+header .right{
+	width: 0.58rem;
+	height: 0.59rem;
+	background:url('../img/syjtop-y icon.png') center center no-repeat;
+	background-size: 100%;
+	margin-top: 0.2rem;
+	margin-right: 0.5rem;
+	float: right;
+} 
+header .zi{
+	margin-top: 0.25rem;
+	margin-left:2.2rem;
+	font-size: 0.38rem;
+	float: left;
+	font-family: "苹方";
+	font-weight: 700;
+	color:#f8f8f8;
+}
+/* top */
+/* header */
+nav{
+	width:100%;
+	height: 1.4rem;
+	/* background: blue; */
+	margin: 0 auto;
+	position: relative; 
+}
+nav .banyuan1{
+	
+	width:1.22rem;
+	height: 0.68rem;
+    background: url('../img/syjbanyuan1.png')center center no-repeat; 
+	/* background: pink; */
+    background-size: 100%; 
+	/* float: left; */
+	 position: absolute;
+	top: 0.27rem;
+	left: 0.4rem; 
+	margin: auto;
+
+}
+nav .zi1{
+	 font-size: 0.48rem;
+    font-family: "San Francisco Display";
+    color: #ec482e;
+    font-weight: 700;
+    position: absolute;
+    top: 0.45rem;
+    left: 0.73rem;
+}
+nav .zi2{
+	 font-size: 0.18rem;
+    font-family: "San Francisco Display";
+    color: #ec482e;
+    /* font-weight: 700; */
+    position: absolute;
+    top:1.03rem;
+    left: 0.5rem;
+}
+nav .banyuan2{
+	
+	width:1.22rem;
+	height: 0.68rem;
+    background: url('../img/syjbanyuan2.png')center center no-repeat; 
+	/* background: pink; */
+    background-size: 100%; 
+	/* float: left; */
+	 position: absolute;
+	top: 0.27rem;
+	left:2rem; 
+	margin: auto;
+
+}
+nav .zi3{
+	 font-size: 0.48rem;
+    font-family: "San Francisco Display";
+    color: #ec482e;
+    font-weight: 700;
+    position: absolute;
+    top: 0.45rem;
+    left: 2.33rem;
+}
+nav .zi4{
+	 font-size: 0.18rem;
+    font-family: "San Francisco Display";
+    color: #ec482e;
+    /* font-weight: 700; */
+    position: absolute;
+    top:1.03rem;
+    left: 2.15rem;
+}
+nav .right{
+	width: 0.58rem;
+	height: 0.58rem;
+	background:url('../img/syjxqicon.png') center center no-repeat;
+	background-size: 100%;
+	margin-top: 0.4rem;
+	margin-right: 0.5rem;
+	float: right;
+
+}
+/* header */
+/* xq */
+.xq{
+	width: 6.74rem;
+	height: 7.69rem;
+	background:url('../img/syj03.png')center center no-repeat;
+	background-size: 100%;
+	margin: 0 auto;
+	margin-top: 0.2rem;
+	position: relative;
+}
+.xq .yifu{
+	width: 4.97rem;
+	height: 5.65rem;
+	background:url('../img/syj07 (2).png')center center no-repeat;
+	background-size: 100%;
+	position: absolute;
+	top: 1.1rem;
+	left: 0.9rem;
+	margin:auto;
+}
+.xq .cl{
+	width: 1.02rem;
+	height: 1.02rem;
+	background: url('../img/syj26.png') center center no-repeat;
+	background-size: 100%;
+	position: absolute;
+	top: 3.4rem;
+	right: 1.23rem;
+	margin: auto;
+}
+.xq .zi1{
+	 font-size: 0.28rem;
+    font-family: "San Francisco Display";
+    color: #696262;
+    font-weight: 500; 
+    position: absolute;
+    top: 4.3rem;
+    left: 0.01rem;
+    margin: auto;
+}
+.xq .xian1{
+	width: 1.12rem;
+	height: 0.6rem;
+	background: url('../img/syjxian1.png') center center no-repeat;
+	background-size: 100%;
+	position: absolute;
+	top: 4.67rem;
+	left: 0.76rem;
+	margin: auto;
+}
+.xq .zi2{
+	 font-size: 0.28rem;
+    font-family: "San Francisco Display";
+    color: #696262;
+    font-weight: 500; 
+    position: absolute;
+    top: 2.32rem;
+    right:0.01rem;
+    margin: auto;
+    line-height: 0.3rem;
+}
+.xq .xian2{
+	 width: 0.96rem;
+	height: 0.78rem;
+	background: url('../img/syjxian2.png') center center no-repeat;
+	background-size: 100%;
+	position: absolute;
+	top: 2.65rem;
+	right: 0.88rem;
+	margin: auto;
+}
+.xq .tuoyuan{
+	 width: 0.66rem;
+	height: 0.31rem;
+	background: url('../img/syjtuoyuan.png') center center no-repeat;
+	background-size: 100%;
+	position: absolute;
+	top: 2.95rem;
+	right: 0.2rem;
+	margin: auto;
+}
+/* xq */
+/* tu */
+.ditu{
+	width: 4.25rem;
+	height: 1.42rem;
+	background:url('../img/syj39.png')center center no-repeat;
+	background-size: 100%;
+	margin-left: 1.93rem;
+}
+/* tu */
+/* 底部 */
+.bottom{
+
+	width: 100%;
+	height: 1rem;
+	background: #e5392c;
+	margin-top: 0.6rem;
+ }
+.zhaopian{
+	width:3.5rem;
+	height: 1rem;
+	/* background: pink; */
+	margin-left:0.24rem;
+	float: left;
+	/* border: 0.03rem solid; */
+	position: relative;
+}
+.zhaopian .tu{
+	width: 0.5rem;
+	height: 0.42rem;
+	background:url('../img/syj43.png')center center no-repeat;
+	background-size:100%;
+	position: absolute;
+	top: 0.29rem;
+	left: 0.86rem;
+}
+.zhaopian .zi1{
+    font-size: 0.25rem;
+    font-family: "苹方";
+    color: #f8f8f8;
+    font-weight: 700;
+    position: absolute;
+    top: 0.21rem;
+    left: 1.45rem;
+}
+.zhaopian .zi2{
+    font-size: 0.15rem;
+    font-family: "San Francisco Display";
+    color: #f8f8f8;
+   /*  font-weight: 700; */
+    position: absolute;
+    top: 0.52rem;
+    left: 1.45rem;
+}
+.goumai{
+	width:3.5rem;
+	height: 1rem;
+	/* background: pink; */
+	margin-right:0.24rem;
+	float: left;
+	/* border: 0.03rem solid; */
+	position: relative;
+}
+.goumai .tu{
+	width: 0.5rem;
+	height: 0.42rem;
+	background:url('../img/syj45.png')center center no-repeat;
+	background-size:100%;
+	position: absolute;
+	top: 0.29rem;
+	left: 0.99rem;
+}
+.goumai .zi1{
+    font-size: 0.25rem;
+    font-family: "苹方";
+    color: #f8f8f8;
+    font-weight: 700;
+    position: absolute;
+    top: 0.21rem;
+    left: 1.58rem;
+}
+.goumai .zi2{
+    font-size: 0.15rem;
+    font-family: "San Francisco Display";
+    color: #f8f8f8;
+   /*  font-weight: 700; */
+    position: absolute;
+    top: 0.52rem;
+    left: 1.58rem;
+}
+
+/* 底部 */
