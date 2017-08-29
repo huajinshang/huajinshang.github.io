@@ -1,0 +1,303 @@
+html,body,form,input,textarea,h1,h2,h3,h4,h5,h6,ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    border: none;
+}
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height:100%;
+    position: relative;
+    font-family: "苹方 中等";
+}
+.left{
+    width: 300px;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    background: #3e3e3e;
+}
+.left>.header{
+    width: 100%;
+    height:50px;
+}
+.header>.logo{
+    height: 100%;
+    line-height: 50px;
+    font-size: 26px;
+    color:#fff;
+    float: left;
+}
+.header>.add{
+    width: 50px;
+    height: 100%;
+    float: right;
+    color:#fff;
+    line-height: 50px;
+    font-size: 28px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+.leftList{
+    width: 100%;
+    height: auto;
+}
+.leftList>ul{
+    width: 100%;
+    height: 100%;
+}
+.leftList>ul>li{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    borer-top:2px solod #dcdcdc;
+}
+.leftList>ul>li>.point{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: red;
+    float: left;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+.listName{
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+.listName>input{
+    width: 100%;
+    height:100%;
+    outline: 0;
+    border: none;
+    background: none;
+    line-height: 40px;
+    font-size: 19px;
+    color:#fff;
+    user-select: none;
+    cursor: pointer;
+    font-family: "苹方";
+}
+
+
+/*右边开始*/
+.right{
+    height:100%;
+    position: absolute;
+    left:300px;
+    right:0;
+    top:0;
+    bottom:0;
+    overflow-y: scroll;
+}
+.right>.search{
+    margin-top: 10px;
+    width: 98%;
+    height: 44px;
+    border-radius: 20px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+.right>.search>input{
+    width: 60%;
+    height:100%;
+    border-radius: 20px;
+    outline: none;
+    font-size: 18px;
+    padding-left: 14px;
+    float: left;
+}
+.setting{
+    width: 80px;
+    height: 44px;
+    float: left;
+    margin-left: 15%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.setting>button{
+    width: 60px;
+    height: 34px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 20px;
+    outline: 0;
+    border: 0;
+    font-size: 17px;
+}
+.setBox{
+    position: absolute;
+    width: 300px;
+    height: 235px;
+    border: 1px solid #000;
+    top:60px;
+    left:-113px;
+    background: #ffffff;
+}
+.input{
+    width: 100%;
+    height: 40px;
+}
+.input>input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding:0 5px;
+    font-size: 16px;
+    font-family: "苹方 常规";
+}
+.colorList{
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+}
+.colorList>p{
+    font-size: 18px;
+}
+.colorList>ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.colorList>ul>li{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: red;
+}
+.colorList>ul>li.colorActive{
+    padding: 3px;
+    border:2px solid red;
+    background-clip: content-box;
+}
+.setbtn{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 20px;
+}
+.setbtn>button{
+    width: 25%;
+    height: 60%;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+.rightBottom{
+    width: 100%;
+    height: auto;
+}
+.rightBottom>.title{
+    padding: 10px 15px;
+}
+.rightBottom>.done,.rightBottom>.finsh{
+    width: 100%;
+    height: auto;
+}
+.done>.doneNum>span,.finsh>.doneNum>span{
+    display: block;
+    border: 12px solid #8c8c8c;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    float: left;
+    margin-right: 5px;
+}
+.rightBottom>.done>.doneNum,.rightBottom>.finsh>.doneNum{
+    vertical-align: middle;
+    padding: 10px 26px;
+    font-size: 18px;
+}
+.rightBottom>.done>ul,.rightBottom>.finsh>ul{
+    padding: 5px 52px;
+    width: 100%;
+    height:auto;
+}
+.rightBottom>.done>ul>li,.rightBottom>.finsh>ul>li{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #dcdcdc;
+}
+.finsh>ul>li>span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 2px;
+    float: left;
+    margin-right: 16px;
+    vertical-align: middle;
+}
+.done>ul>li>span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 2px;
+    background-clip: content-box;
+    border: 1px solid;
+    float: left;
+    margin-right: 16px;
+    vertical-align: middle;
+}
+
+.foot{
+    margin-top: 30px;
+    padding-left: 30px;
+    width: 100%;
+    height:auto;
+}
+.foot>button{
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.active{
+    background: #8c8c8c;
+}
+span.isRotate{
+    transform: rotate(90deg) translateX(7px);
+}
+.todocon{
+    width: 80%;
+    height:100%;
+}
+.todocon>input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 0;
+    background: none;
+    font-family: "苹方";
+    font-size: 17px;
+    font-weight: 500;
+}

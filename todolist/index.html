@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" ng-app="todoApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/angular.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body ng-controller="todoCtrl">
+<div class="left">
+    <div class="header">
+        <div class="logo">TodoList</div>
+        <div class="add" ng-click="addList()">+</div>
+    </div>
+    <div class="leftList">
+        <ul>
+            <li ng-class="index==$index?'active':''" ng-repeat="v in todos" ng-click="selectList($index)">
+                <div class="point" ng-style="{background:v.color}">
+                    <span></span>
+                </div>
+                <div class="listName"><input type="text" ng-model="v.title"></div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="right">
+    <div class="search">
+        <input type="text" placeholder="请输入关键字" ng-model="search">
+        <div class="setting">
+            <button ng-click="setToggle(index)">设置</button>
+            <div class="setBox" ng-show="setting">
+                <div class="input">
+                    <input type="text" ng-model="changeTitle" ng-style="{color:changeColor}">
+                </div>
+                <div class="colorList">
+                    <p>颜色列表</p>
+                    <ul>
+                        <li ng-repeat="v in colorArr" ng-style="{backgroundColor:v,borderColor:v}" ng-class="v==changeColor?'colorActive':''" ng-click="setColor(v)"></li>
+                    </ul>
+                </div>
+                <div class="setbtn">
+                    <button ng-click="del(index)">删除</button>
+                    <button ng-click="quxiao()">取消</button>
+                    <button ng-click="sure(index)">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="rightBottom">
+        <div class="title" ng-style="{color:todos[index].color}">
+            <h3>{{todos[index].title}}</h3>
+        </div>
+        <div class="finsh">
+            <div class="doneNum">
+                <span ng-class="finshNum(true)==0?'':{isRotate:doneShow}" ng-click="finshNum(true)==0?'':doneToggle()"></span>
+                已经完成 {{finshNum(true)}} 项
+            </div>
+            <ul ng-show="doneShow">
+                <li ng-repeat="v in todos[index]['todoCon'] |filter:true | filter:search">
+                    <span ng-style="{background:todos[index].color}" ng-click="doneChange(v,false)"></span>
+                    <div class="todocon"><input type="text" ng-model="v.title"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="done">
+            <div class="doneNum">
+                <span ng-class="finshNum(false)==0?'':{isRotate:doneShow1}" ng-click="finshNum(false)==0?'':doneToggle1()"></span>
+                未完成 {{finshNum(false)}} 项
+            </div>
+            <ul ng-show="doneShow1">
+                <li ng-repeat="v in todos[index]['todoCon'] |filter:false | filter:search">
+                    <span ng-style="{backgroundColor:todos[index].color,borderColor:todos[index].color}" ng-click="doneChange(v,true)"></span>
+                    <div class="todocon"><input type="text" ng-model="v.title"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="foot">
+            <button ng-style="{background:todos[index].color}" ng-click="addDone(index)">添加待办项</button>
+        </div>
+    </section>
+</div>
+</body>
+</html>
